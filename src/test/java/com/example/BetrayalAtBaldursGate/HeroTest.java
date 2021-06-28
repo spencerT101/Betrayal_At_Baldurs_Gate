@@ -55,4 +55,9 @@ public class HeroTest {
     public void heroGetSanity(){
         assertEquals(7, hero1.getSanity());
     }
+    @Test
+    public void heroSetSanity(){
+        hero1.setSanity(8);
+        assertEquals(8, hero1.getSanity());
+    }
 }
