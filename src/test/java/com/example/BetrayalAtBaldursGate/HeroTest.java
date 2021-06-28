@@ -70,4 +70,8 @@ public class HeroTest {
         hero1.setKnowledge(9);
         assertEquals(9, hero1.getKnowledge());
     }
+    @Test
+    public void heroGetSpecies(){
+        assertEquals("human", hero1.getSpecies());
+    }
 }
