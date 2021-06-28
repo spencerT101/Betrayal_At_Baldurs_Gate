@@ -41,4 +41,14 @@ public class HeroTest {
         hero1.setMight(6);
         assertEquals(6, hero1.getMight());
     }
+    @Test
+    public void heroGetSpeed(){
+        assertEquals(6, hero1.getSpeed());
+    }
+
+    @Test
+    public void heroSetSpeed(){
+        hero1.setSpeed(7);
+        assertEquals(7, hero1.getSpeed());
+    }
 }
