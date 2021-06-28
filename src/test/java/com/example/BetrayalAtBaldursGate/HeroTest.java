@@ -25,5 +25,20 @@ public class HeroTest {
         assertEquals("barry", hero1.getName());
     }
 
-    @
+    @Test
+    public void heroSetName(){
+        hero1.setName("gary");
+        assertEquals("gary", hero1.getName());
+    }
+
+    @Test
+    public void heroHasMight(){
+        assertEquals(5, hero1.getMight());
+    }
+
+    @Test
+    public void heroSetMight(){
+        hero1.setMight(6);
+        assertEquals(6, hero1.getMight());
+    }
 }
