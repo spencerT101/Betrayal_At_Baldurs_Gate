@@ -6,12 +6,14 @@ public abstract class Tile {
     private Boolean eastDoor;
     private Boolean southDoor;
     private Boolean westDoor;
+    private Icon icon;
 
-    public Tile(Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor) {
+    public Tile(Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon) {
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
         this.southDoor = southDoor;
         this.westDoor = westDoor;
+        this.icon = icon;
     }
 
     public Boolean getNorthDoor() {
@@ -44,5 +46,13 @@ public abstract class Tile {
 
     public void setWestDoor(Boolean westDoor) {
         this.westDoor = westDoor;
+    }
+
+    public Icon getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Icon icon) {
+        this.icon = icon;
     }
 }
