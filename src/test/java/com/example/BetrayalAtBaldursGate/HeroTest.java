@@ -74,4 +74,9 @@ public class HeroTest {
     public void heroGetSpecies(){
         assertEquals("human", hero1.getSpecies());
     }
+    @Test
+    public void heroSetSpecies(){
+        hero1.setSpecies("donkey");
+        assertEquals("donkey", hero1.getSpecies());
+    }
 }
