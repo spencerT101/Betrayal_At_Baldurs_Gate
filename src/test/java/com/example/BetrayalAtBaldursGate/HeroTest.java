@@ -51,4 +51,8 @@ public class HeroTest {
         hero1.setSpeed(7);
         assertEquals(7, hero1.getSpeed());
     }
+    @Test
+    public void heroGetSanity(){
+        assertEquals(7, hero1.getSanity());
+    }
 }
