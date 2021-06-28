@@ -1,5 +1,7 @@
 package com.example.BetrayalAtBaldursGate.characters;
 
+import java.util.ArrayList;
+
 public abstract class Character {
 
     private String name;
@@ -8,14 +10,16 @@ public abstract class Character {
     private int sanity;
     private int knowledge;
     private String species;
+    private ArrayList inventory;
 
-    public Character(String name, int might, int speed, int sanity, int knowledge, String species) {
+    public Character(String name, int might, int speed, int sanity, int knowledge, String species, ArrayList inventory) {
         this.name = name;
         this.might = might;
         this.speed = speed;
         this.sanity = sanity;
         this.knowledge = knowledge;
         this.species = species;
+        this.inventory = new ArrayList();
     }
 
     public String getName() {
@@ -64,5 +68,13 @@ public abstract class Character {
 
     public void setSpecies(String species) {
         this.species = species;
+    }
+
+    public ArrayList getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList inventory) {
+        this.inventory = inventory;
     }
 }
