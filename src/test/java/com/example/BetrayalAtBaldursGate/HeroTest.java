@@ -79,4 +79,9 @@ public class HeroTest {
         hero1.setSpecies("donkey");
         assertEquals("donkey", hero1.getSpecies());
     }
+
+    @Test
+    public void heroInventoryIsZero(){
+        assertEquals(0, hero1.getInventory().size());
+    }
 }
