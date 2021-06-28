@@ -60,4 +60,9 @@ public class HeroTest {
         hero1.setSanity(8);
         assertEquals(8, hero1.getSanity());
     }
+
+    @Test
+    public void heroGetKnowledge(){
+        assertEquals(8, hero1.getKnowledge());
+    }
 }
