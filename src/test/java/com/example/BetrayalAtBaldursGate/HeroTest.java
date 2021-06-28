@@ -65,4 +65,9 @@ public class HeroTest {
     public void heroGetKnowledge(){
         assertEquals(8, hero1.getKnowledge());
     }
+    @Test
+    public void heroSetKnowledge(){
+        hero1.setKnowledge(9);
+        assertEquals(9, hero1.getKnowledge());
+    }
 }
