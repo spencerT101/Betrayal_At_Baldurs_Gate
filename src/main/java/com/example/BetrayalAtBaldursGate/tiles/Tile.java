@@ -1,9 +1,10 @@
 package com.example.BetrayalAtBaldursGate.tiles;
 
-import com.example.BetrayalAtBaldursGate.games.GameState;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.example.BetrayalAtBaldursGate.characters.Hero;
+import com.example.BetrayalAtBaldursGate.characters.Hero;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "tiles")
@@ -31,15 +32,16 @@ public abstract class Tile {
     @Column(name = "icon")
     private Icon icon;
 
+    private ArrayList<Hero> heroes;
 
-
-    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon, ) {
+    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon) {
         this.name = name;
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
         this.southDoor = southDoor;
         this.westDoor = westDoor;
         this.icon = icon;
+        this.heroes = new ArrayList<>();
 
     }
 

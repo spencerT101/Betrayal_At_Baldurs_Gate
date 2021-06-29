@@ -3,49 +3,33 @@ package com.example.BetrayalAtBaldursGate.games;
 import com.example.BetrayalAtBaldursGate.cards.EventCard;
 import com.example.BetrayalAtBaldursGate.cards.OmenCard;
 import com.example.BetrayalAtBaldursGate.characters.Hero;
+import com.example.BetrayalAtBaldursGate.characters.Monster;
 import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
 import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.List;
-
 
 
 public abstract class GameState {
 
-
-    private Long id;
-
-
     private int roundCounter;
-
-
     private ArrayList<Hero> players;
-
-
+    private ArrayList<Monster> monsters;
     private ArrayList<BuildingTile> buildingTiles;
-
-
     private ArrayList<StreetTile>streetTiles;
-
-
     private ArrayList<OmenCard> omenCards;
-
-
     private ArrayList<EventCard>eventCards;
 
 
     public GameState() {
         this.roundCounter = 0;
         this.players = new ArrayList<>();
+        this.monsters = new ArrayList<>();
         this.buildingTiles = new ArrayList<>();
         this.streetTiles = new ArrayList<>();
         this.omenCards = new ArrayList<>();
         this.eventCards = new ArrayList<>();
     }
-
 
     public int getRoundCounter() {
         return roundCounter;
@@ -55,51 +39,51 @@ public abstract class GameState {
         this.roundCounter = roundCounter;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public List<Hero> getPlayers() {
+    public ArrayList<Hero> getPlayers() {
         return players;
     }
 
-    public void setPlayers(List<Hero> players) {
+    public void setPlayers(ArrayList<Hero> players) {
         this.players = players;
     }
 
-    public List<BuildingTile> getBuildingTiles() {
+    public ArrayList<Monster> getMonsters() {
+        return monsters;
+    }
+
+    public void setMonsters(ArrayList<Monster> monsters) {
+        this.monsters = monsters;
+    }
+
+    public ArrayList<BuildingTile> getBuildingTiles() {
         return buildingTiles;
     }
 
-    public void setBuildingTiles(List<BuildingTile> buildingTiles) {
+    public void setBuildingTiles(ArrayList<BuildingTile> buildingTiles) {
         this.buildingTiles = buildingTiles;
     }
 
-    public List<StreetTile> getStreetTiles() {
+    public ArrayList<StreetTile> getStreetTiles() {
         return streetTiles;
     }
 
-    public void setStreetTiles(List<StreetTile> streetTiles) {
+    public void setStreetTiles(ArrayList<StreetTile> streetTiles) {
         this.streetTiles = streetTiles;
     }
 
-    public List<OmenCard> getOmenCards() {
+    public ArrayList<OmenCard> getOmenCards() {
         return omenCards;
     }
 
-    public void setOmenCards(List<OmenCard> omenCards) {
+    public void setOmenCards(ArrayList<OmenCard> omenCards) {
         this.omenCards = omenCards;
     }
 
-    public List<EventCard> getEventCards() {
+    public ArrayList<EventCard> getEventCards() {
         return eventCards;
     }
 
-    public void setEventCards(List<EventCard> eventCards) {
+    public void setEventCards(ArrayList<EventCard> eventCards) {
         this.eventCards = eventCards;
     }
 

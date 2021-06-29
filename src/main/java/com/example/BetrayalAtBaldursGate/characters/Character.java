@@ -1,8 +1,5 @@
 package com.example.BetrayalAtBaldursGate.characters;
 
-import com.example.BetrayalAtBaldursGate.games.GameState;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 
 
@@ -34,8 +31,6 @@ public abstract class Character {
 
     @Column(name = "image")
     private String image;
-
-
 
 
     public Character(String name, int might, int speed, int sanity, int knowledge, String species, String image) {
@@ -107,11 +102,4 @@ public abstract class Character {
         this.species = species;
     }
 
-    public GameState getGameState() {
-        return gameState;
-    }
-
-    public void setGameState(GameState gameState) {
-        this.gameState = gameState;
-    }
 }

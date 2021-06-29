@@ -1,8 +1,5 @@
 package com.example.BetrayalAtBaldursGate.cards;
 
-import com.example.BetrayalAtBaldursGate.games.GameState;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 
 @Entity
@@ -17,13 +14,8 @@ public abstract class Card {
     @Column(name = "flavour_text")
     private String flavourText;
 
-    @JsonIgnoreProperties(value="cards")
-    @ManyToOne
-    @JoinColumn(name = "game_state_id", nullable = false)
-    private GameState gameState;
 
-
-    public Card(String flavourText, GameState gameState) {
+    public Card(String flavourText) {
         this.flavourText = flavourText;
         this.gameState = gameState;
     }
