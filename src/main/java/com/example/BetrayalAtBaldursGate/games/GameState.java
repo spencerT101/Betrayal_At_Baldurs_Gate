@@ -129,4 +129,5 @@ public abstract class GameState {
     public void addEventCardToList(EventCard eventCard){
         this.eventCards.add(eventCard);
     }
+
 }

@@ -6,6 +6,18 @@ public abstract class Card {
 
     public Card(String flavourText) {
         this.flavourText = flavourText;
+        this.gameState = gameState;
+    }
+
+    public Card() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFlavourText() {
@@ -14,5 +26,13 @@ public abstract class Card {
 
     public void setFlavourText(String flavourText) {
         this.flavourText = flavourText;
+    }
+
+    public GameState getGameState() {
+        return gameState;
+    }
+
+    public void setGameState(GameState gameState) {
+        this.gameState = gameState;
     }
 }

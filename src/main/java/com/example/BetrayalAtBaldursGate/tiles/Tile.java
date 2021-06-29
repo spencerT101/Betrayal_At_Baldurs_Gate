@@ -6,16 +6,32 @@ public abstract class Tile {
     private Boolean northDoor;
     private Boolean eastDoor;
     private Boolean southDoor;
+
+    @Column (name = "west_door")
     private Boolean westDoor;
+
+    @Column(name = "icon")
     private Icon icon;
 
-    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon) {
+    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon, GameState gameState) {
         this.name = name;
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
         this.southDoor = southDoor;
         this.westDoor = westDoor;
         this.icon = icon;
+        this.gameState = gameState;
+    }
+
+    public Tile() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -64,5 +80,13 @@ public abstract class Tile {
 
     public void setIcon(Icon icon) {
         this.icon = icon;
+    }
+
+    public GameState getGameState() {
+        return gameState;
+    }
+
+    public void setGameState(GameState gameState) {
+        this.gameState = gameState;
     }
 }

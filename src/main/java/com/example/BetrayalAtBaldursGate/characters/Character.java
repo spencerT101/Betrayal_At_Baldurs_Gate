@@ -8,11 +8,13 @@ public abstract class Character {
     private int might;
     private int speed;
     private int sanity;
+
+    @Column(name = "knowledge")
     private int knowledge;
     private String species;
 //    private ArrayList<> inventory;
 
-    public Character(String name, int might, int speed, int sanity, int knowledge, String species) {
+    public Character(String name, int might, int speed, int sanity, int knowledge, String species, GameState gameState) {
         this.name = name;
         this.might = might;
         this.speed = speed;
@@ -20,6 +22,17 @@ public abstract class Character {
         this.knowledge = knowledge;
         this.species = species;
 //        this.inventory = new ArrayList();
+    }
+
+    public Character() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -70,4 +83,11 @@ public abstract class Character {
         this.species = species;
     }
 
+    public GameState getGameState() {
+        return gameState;
+    }
+
+    public void setGameState(GameState gameState) {
+        this.gameState = gameState;
+    }
 }
