@@ -12,7 +12,7 @@ public abstract class Character {
     private String species;
     private ArrayList inventory;
 
-    public Character(String name, int might, int speed, int sanity, int knowledge, String species, ArrayList inventory) {
+    public Character(String name, int might, int speed, int sanity, int knowledge, String species) {
         this.name = name;
         this.might = might;
         this.speed = speed;
