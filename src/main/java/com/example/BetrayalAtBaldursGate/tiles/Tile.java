@@ -8,12 +8,21 @@ public abstract class Tile {
     private Boolean westDoor;
     private Icon icon;
 
-    public Tile(Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon) {
+    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon) {
+        this.name = name;
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
         this.southDoor = southDoor;
         this.westDoor = westDoor;
         this.icon = icon;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Boolean getNorthDoor() {
