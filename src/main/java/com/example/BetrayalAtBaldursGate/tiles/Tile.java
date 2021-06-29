@@ -1,7 +1,6 @@
 package com.example.BetrayalAtBaldursGate.tiles;
 
 import com.example.BetrayalAtBaldursGate.characters.Hero;
-import com.example.BetrayalAtBaldursGate.characters.Hero;
 
 import javax.persistence.*;
 import java.util.ArrayList;

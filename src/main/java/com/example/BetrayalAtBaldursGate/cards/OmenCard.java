@@ -7,6 +7,8 @@ public class OmenCard extends Card{
     }
 
 
+
+
     public void hauntRoll(){
 
     }
