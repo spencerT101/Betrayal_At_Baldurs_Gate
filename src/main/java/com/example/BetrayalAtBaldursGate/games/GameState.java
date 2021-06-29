@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+@Entity
+@Table(name = "game_states")
 public abstract class GameState {
 
     @Id
