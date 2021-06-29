@@ -18,7 +18,7 @@ public class StreetTileTest {
     }
 
     @Test
-    public void canGetStreetTile() {
+    public void canGetStreetTileName() {
         assertEquals("Tile", streetTile1.getName());
 
     }
