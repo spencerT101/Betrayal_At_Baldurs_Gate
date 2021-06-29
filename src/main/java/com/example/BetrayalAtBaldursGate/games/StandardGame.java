@@ -4,8 +4,8 @@ public class StandardGame extends GameState{
 
     private int omenCounter;
 
-    public StandardGame(int roundCounter, int omenCounter) {
-        super(roundCounter);
+    public StandardGame() {
+        super();
         this.omenCounter = 0;
     }
 

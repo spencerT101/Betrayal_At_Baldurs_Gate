@@ -19,9 +19,9 @@ public abstract class GameState {
     private ArrayList<EventCard>eventCards;
 
 
-    public GameState(int roundCounter) {
-
-        this.roundCounter = roundCounter;
+    public GameState() {
+        this.roundCounter = 0;
+        this.players = new ArrayList<>();
         this.buildingTiles = new ArrayList<>();
         this.streetTiles = new ArrayList<>();
         this.omenCards = new ArrayList<>();
