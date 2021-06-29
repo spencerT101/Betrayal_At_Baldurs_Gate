@@ -72,4 +72,27 @@ public class StandardGameTest {
         assertEquals(1,gameOne.getBuildingTiles().size());
 
     }
+
+    @Test
+    public void eventCardArrayListStartAtZero(){
+        assertEquals(0,gameOne.getBuildingTiles().size());
+    }
+
+    @Test
+    public void addEventCardToEventCardArrayList(){
+        gameOne.addEventCardToList(eventCard1);
+        assertEquals(1,gameOne.getEventCards().size());
+
+    }
+    @Test
+    public void omenCardArrayListStartAtZero(){
+        assertEquals(0,gameOne.getOmenCards().size());
+    }
+
+    @Test
+    public void addOmenCardToOmenCardArrayList(){
+        gameOne.addOmenCardToList(omenCard1);
+        assertEquals(1,gameOne.getOmenCards().size());
+
+    }
 }
