@@ -4,7 +4,11 @@ public abstract class Tile {
 
     private String name;
     private Boolean northDoor;
+
+    @Column(name = "east_door")
     private Boolean eastDoor;
+
+    @Column(name = "south_door")
     private Boolean southDoor;
 
     @Column (name = "west_door")

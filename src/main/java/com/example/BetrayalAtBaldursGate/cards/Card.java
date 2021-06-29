@@ -2,9 +2,16 @@ package com.example.BetrayalAtBaldursGate.cards;
 
 public abstract class Card {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "flavour_text")
     private String flavourText;
 
-    public Card(String flavourText) {
+
+    public Card(String flavourText, GameState gameState) {
         this.flavourText = flavourText;
         this.gameState = gameState;
     }

@@ -5,14 +5,25 @@ import java.util.ArrayList;
 public abstract class Character {
 
     private String name;
+
+    @Column(name = "might")
     private int might;
+
+    @Column(name = "speed")
     private int speed;
     private int sanity;
 
     @Column(name = "knowledge")
     private int knowledge;
+
+    @Column(name = "species")
     private String species;
-//    private ArrayList<> inventory;
+
+    @JsonIgnoreProperties(value="characters")
+    @ManyToOne
+    @JoinColumn(name = "game_state_id", nullable = false)
+    private GameState gameState;
+
 
     public Character(String name, int might, int speed, int sanity, int knowledge, String species, GameState gameState) {
         this.name = name;
@@ -21,7 +32,8 @@ public abstract class Character {
         this.sanity = sanity;
         this.knowledge = knowledge;
         this.species = species;
-//        this.inventory = new ArrayList();
+        this.gameState = gameState;
+
     }
 
     public Character() {
