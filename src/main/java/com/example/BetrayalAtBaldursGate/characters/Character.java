@@ -19,7 +19,7 @@ public abstract class Character {
         this.sanity = sanity;
         this.knowledge = knowledge;
         this.species = species;
-        this.inventory = new ArrayList();
+//        this.inventory = new ArrayList();
     }
 
     public String getName() {
