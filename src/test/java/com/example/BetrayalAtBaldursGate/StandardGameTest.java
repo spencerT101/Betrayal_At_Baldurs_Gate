@@ -5,6 +5,9 @@ import com.example.BetrayalAtBaldursGate.games.StandardGame;
 import com.example.BetrayalAtBaldursGate.tiles.Icon;
 import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
 import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
+import com.example.BetrayalAtBaldursGate.cards.OmenCard;
+import com.example.BetrayalAtBaldursGate.cards.EventCard;
+
 
 import org.junit.Before;
 import org.junit.Test;
@@ -17,6 +20,8 @@ public class StandardGameTest {
     private Hero hero1;
     private StreetTile streetTile1;
     private BuildingTile buildingTile1;
+    private OmenCard omenCard1;
+    private EventCard eventCard1;
 
 
     @Before
@@ -25,7 +30,8 @@ public class StandardGameTest {
         hero1 = new Hero("Kieran", 3, 4, 4,2, "Human", 5, 5, 5, 5);
         streetTile1 = new StreetTile("Testy", true, false, true, true, Icon.EVENT);
         buildingTile1 = new BuildingTile("Test", true, false, true, true, Icon.EVENT);
-
+        omenCard1 = new OmenCard("Omen Text");
+        eventCard1 = new EventCard("Event Text");
 
     }
 
