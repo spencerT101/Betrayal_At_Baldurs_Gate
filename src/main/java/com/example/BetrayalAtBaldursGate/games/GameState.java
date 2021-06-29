@@ -1,35 +1,33 @@
 package com.example.BetrayalAtBaldursGate.games;
 
+import com.example.BetrayalAtBaldursGate.cards.EventCard;
+import com.example.BetrayalAtBaldursGate.cards.OmenCard;
+import com.example.BetrayalAtBaldursGate.characters.Hero;
+import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
+import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
+
 import java.util.ArrayList;
 
-public class Game {
+public abstract class GameState {
 
-    private int omenCounter;
+
     private int roundCounter;
-    private ArrayList players;
-    private ArrayList buildingTiles;
-    private ArrayList streetTiles;
-    private ArrayList omenCards;
-    private ArrayList eventCards;
+    private ArrayList<Hero> players;
+    private ArrayList<BuildingTile> buildingTiles;
+    private ArrayList<StreetTile>streetTiles;
+    private ArrayList<OmenCard> omenCards;
+    private ArrayList<EventCard>eventCards;
 
 
-    public Game(int omenCounter, int roundCounter, ArrayList players, ArrayList buildingTiles, ArrayList streetTiles, ArrayList omenCards, ArrayList eventCards) {
-        this.omenCounter = omenCounter;
+    public GameState(int roundCounter) {
+
         this.roundCounter = roundCounter;
-        this.players = players;
-        this.buildingTiles = buildingTiles;
-        this.streetTiles = streetTiles;
-        this.omenCards = omenCards;
-        this.eventCards = eventCards;
+        this.buildingTiles = new ArrayList<>();
+        this.streetTiles = new ArrayList<>();
+        this.omenCards = new ArrayList<>();
+        this.eventCards = new ArrayList<>();
     }
 
-    public int getOmenCounter() {
-        return omenCounter;
-    }
-
-    public void setOmenCounter(int omenCounter) {
-        this.omenCounter = omenCounter;
-    }
 
     public int getRoundCounter() {
         return roundCounter;
