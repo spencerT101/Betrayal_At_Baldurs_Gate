@@ -2,6 +2,7 @@ package com.example.BetrayalAtBaldursGate.tiles;
 
 public abstract class Tile {
 
+    private String name;
     private Boolean northDoor;
     private Boolean eastDoor;
     private Boolean southDoor;
