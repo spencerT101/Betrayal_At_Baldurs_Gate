@@ -81,7 +81,7 @@ public abstract class GameState {
         this.players.add(hero);
     }
 
-    public void addBuildingTitleToList(BuildingTile buildingTile){
+    public void addBuildingTileToList(BuildingTile buildingTile){
         this.buildingTiles.add(buildingTile);
     }
 
