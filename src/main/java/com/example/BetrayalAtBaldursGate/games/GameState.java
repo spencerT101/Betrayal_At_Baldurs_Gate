@@ -76,4 +76,24 @@ public abstract class GameState {
     public void setEventCards(ArrayList eventCards) {
         this.eventCards = eventCards;
     }
+
+    public void addPlayerToList(Hero hero){
+        this.players.add(hero);
+    }
+
+    public void addBuildingTitleToList(BuildingTile buildingTile){
+        this.buildingTiles.add(buildingTile);
+    }
+
+    public void addStreetTileToList(StreetTile streetTile) {
+        this.streetTiles.add(streetTile);
+    }
+
+    public void addOmenCardToList(OmenCard omenCard) {
+        this.omenCards.add(omenCard);
+    }
+
+    public void addEventCardToList(EventCard eventCard){
+        this.eventCards.add(eventCard);
+    }
 }
