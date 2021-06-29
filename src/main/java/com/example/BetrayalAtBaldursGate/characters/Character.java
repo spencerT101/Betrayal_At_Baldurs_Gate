@@ -45,8 +45,7 @@ public abstract class Character {
         this.sanity = sanity;
         this.knowledge = knowledge;
         this.species = species;
-        this.gameState = gameState;
-
+        this.image = image;
     }
 
     public Character() {
