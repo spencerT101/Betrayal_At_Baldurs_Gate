@@ -40,10 +40,23 @@ public class StandardGameTest {
         assertEquals(0, gameOne.getRoundCounter());
     }
 
+
     @Test
     public void setRoundCounterValue(){
         gameOne.setRoundCounter(2);
         assertEquals(2, gameOne.getRoundCounter());
+    }
+
+
+    @Test
+    public void omenCounterStartsAtZero(){
+        assertEquals(0, gameOne.getOmenCounter());
+    }
+
+    @Test
+    public void setOmenCounterValue(){
+        gameOne.setOmenCounter(3);
+        assertEquals(3, gameOne.getOmenCounter());
     }
 
     @Test
