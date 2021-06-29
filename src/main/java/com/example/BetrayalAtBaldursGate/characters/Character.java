@@ -10,7 +10,7 @@ public abstract class Character {
     private int sanity;
     private int knowledge;
     private String species;
-    private ArrayList inventory;
+//    private ArrayList<> inventory;
 
     public Character(String name, int might, int speed, int sanity, int knowledge, String species) {
         this.name = name;
@@ -70,11 +70,4 @@ public abstract class Character {
         this.species = species;
     }
 
-    public ArrayList getInventory() {
-        return inventory;
-    }
-
-    public void setInventory(ArrayList inventory) {
-        this.inventory = inventory;
-    }
 }
