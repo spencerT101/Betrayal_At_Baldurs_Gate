@@ -1,9 +1,20 @@
 package com.example.BetrayalAtBaldursGate.characters;
 
-import java.util.ArrayList;
+import com.example.BetrayalAtBaldursGate.games.GameState;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "characters")
 public abstract class Character {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "name")
     private String name;
 
     @Column(name = "might")
@@ -11,6 +22,8 @@ public abstract class Character {
 
     @Column(name = "speed")
     private int speed;
+
+    @Column(name = "sanity")
     private int sanity;
 
     @Column(name = "knowledge")

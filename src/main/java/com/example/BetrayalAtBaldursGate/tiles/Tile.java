@@ -1,8 +1,22 @@
 package com.example.BetrayalAtBaldursGate.tiles;
 
+import com.example.BetrayalAtBaldursGate.games.GameState;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tiles")
 public abstract class Tile {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "north_door")
     private Boolean northDoor;
 
     @Column(name = "east_door")
@@ -16,6 +30,11 @@ public abstract class Tile {
 
     @Column(name = "icon")
     private Icon icon;
+
+    @JsonIgnoreProperties(value="cards")
+    @ManyToOne
+    @JoinColumn(name = "game_state_id", nullable = false)
+    private GameState gameState;
 
     public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon, GameState gameState) {
         this.name = name;
