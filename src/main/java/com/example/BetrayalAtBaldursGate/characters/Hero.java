@@ -1,6 +1,5 @@
 package com.example.BetrayalAtBaldursGate.characters;
 
-import java.util.ArrayList;
 
 public class Hero extends Character {
 
@@ -9,8 +8,8 @@ public class Hero extends Character {
     private int maxSanity;
     private int maxKnowledge;
 
-    public Hero(String name, int might, int speed, int sanity, int knowledge, String species, int maxMight, int maxSpeed, int maxSanity, int maxKnowledge) {
-        super(name, might, speed, sanity, knowledge, species);
+    public Hero(String name, int might, int speed, int sanity, int knowledge, String species, int maxMight, int maxSpeed, int maxSanity, int maxKnowledge, String image) {
+        super(name, might, speed, sanity, knowledge, species, image);
         this.maxMight = maxMight;
         this.maxSpeed = maxSpeed;
         this.maxSanity = maxSanity;
