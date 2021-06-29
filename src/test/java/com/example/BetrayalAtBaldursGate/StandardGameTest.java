@@ -56,6 +56,7 @@ public class StandardGameTest {
         gameOne.addPlayerToList(hero1);
         assertEquals(1, gameOne.getPlayers().size());
     }
+
     @Test
     public void streetTilesArrayListStartAtZero(){
       assertEquals(0,gameOne.getStreetTiles().size());
@@ -65,8 +66,8 @@ public class StandardGameTest {
     public void addStreetTileToStreetTilesArrayList(){
         gameOne.addStreetTileToList(streetTile1);
         assertEquals(1,gameOne.getStreetTiles().size());
-
     }
+
     @Test
     public void buildingTilesArrayListStartAtZero(){
         assertEquals(0,gameOne.getBuildingTiles().size());
@@ -76,7 +77,6 @@ public class StandardGameTest {
     public void addBuildingTileToStreetTilesArrayList(){
         gameOne.addBuildingTileToList(buildingTile1);
         assertEquals(1,gameOne.getBuildingTiles().size());
-
     }
 
     @Test
@@ -88,7 +88,6 @@ public class StandardGameTest {
     public void addEventCardToEventCardArrayList(){
         gameOne.addEventCardToList(eventCard1);
         assertEquals(1,gameOne.getEventCards().size());
-
     }
     @Test
     public void omenCardArrayListStartAtZero(){
@@ -99,6 +98,5 @@ public class StandardGameTest {
     public void addOmenCardToOmenCardArrayList(){
         gameOne.addOmenCardToList(omenCard1);
         assertEquals(1,gameOne.getOmenCards().size());
-
     }
 }
