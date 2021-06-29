@@ -32,13 +32,13 @@ public abstract class Character {
     @Column(name = "species")
     private String species;
 
-    @JsonIgnoreProperties(value="characters")
-    @ManyToOne
-    @JoinColumn(name = "game_state_id", nullable = false)
-    private GameState gameState;
+    @Column(name = "image")
+    private String image;
 
 
-    public Character(String name, int might, int speed, int sanity, int knowledge, String species, GameState gameState) {
+
+
+    public Character(String name, int might, int speed, int sanity, int knowledge, String species, String image) {
         this.name = name;
         this.might = might;
         this.speed = speed;

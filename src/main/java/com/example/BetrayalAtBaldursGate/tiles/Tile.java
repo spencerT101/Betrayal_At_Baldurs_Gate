@@ -31,19 +31,16 @@ public abstract class Tile {
     @Column(name = "icon")
     private Icon icon;
 
-    @JsonIgnoreProperties(value="cards")
-    @ManyToOne
-    @JoinColumn(name = "game_state_id", nullable = false)
-    private GameState gameState;
 
-    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon, GameState gameState) {
+
+    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon, ) {
         this.name = name;
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
         this.southDoor = southDoor;
         this.westDoor = westDoor;
         this.icon = icon;
-        this.gameState = gameState;
+
     }
 
     public Tile() {

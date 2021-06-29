@@ -12,36 +12,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Entity
-@Table(name = "game_states")
+
 public abstract class GameState {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-    @Column(name = "round_counter")
+
     private int roundCounter;
 
-    @JsonIgnoreProperties(value="game_state")
-    @OneToMany(mappedBy = "game_state", fetch = FetchType.LAZY )
-    private List<Hero> players;
 
-    @JsonIgnoreProperties(value="game_state")
-    @OneToMany(mappedBy = "game_state", fetch = FetchType.LAZY )
-    private List<BuildingTile> buildingTiles;
+    private ArrayList<Hero> players;
 
-    @JsonIgnoreProperties(value="game_state")
-    @OneToMany(mappedBy = "game_state", fetch = FetchType.LAZY )
-    private List<StreetTile>streetTiles;
 
-    @JsonIgnoreProperties(value="game_state")
-    @OneToMany(mappedBy = "game_state", fetch = FetchType.LAZY )
-    private List<OmenCard> omenCards;
+    private ArrayList<BuildingTile> buildingTiles;
 
-    @JsonIgnoreProperties(value="game_state")
-    @OneToMany(mappedBy = "game_state", fetch = FetchType.LAZY )
-    private List<EventCard>eventCards;
+
+    private ArrayList<StreetTile>streetTiles;
+
+
+    private ArrayList<OmenCard> omenCards;
+
+
+    private ArrayList<EventCard>eventCards;
 
 
     public GameState() {
