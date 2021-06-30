@@ -42,6 +42,7 @@ public abstract class Tile {
         this.westDoor = westDoor;
         this.icon = icon;
         this.heroes = new ArrayList<>();
+        this.monsters = new ArrayList<>();
 
     }
 

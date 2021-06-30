@@ -13,9 +13,17 @@ public abstract class Card {
     @Column(name = "flavour_text")
     private String flavourText;
 
+    @Column(name = "name")
+    private String name;
 
-    public Card(String flavourText) {
+    @Column(name = "function_text")
+    private String functionText;
+
+
+    public Card(String flavourText, String name, String functionText) {
         this.flavourText = flavourText;
+        this.name = name;
+        this.functionText = functionText;
 
     }
 
@@ -38,5 +46,19 @@ public abstract class Card {
         this.flavourText = flavourText;
     }
 
+    public String getName(){
+        return name;
+    }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getFunctionText() {
+        return functionText;
+    }
+
+    public void setFunctionText(String functionText) {
+        this.functionText = functionText;
+    }
 }

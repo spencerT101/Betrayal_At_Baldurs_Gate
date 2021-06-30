@@ -6,8 +6,8 @@ import javax.persistence.*;
 @Table(name = "omen_cards")
 public class OmenCard extends Card{
 
-    public OmenCard(String flavourText) {
-        super(flavourText);
+    public OmenCard(String flavourText, String name, String functionText) {
+        super(flavourText, name, functionText);
     }
 
     public OmenCard() {

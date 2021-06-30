@@ -20,8 +20,15 @@ Hero extends Character {
     @Column(name = "max_knowledge")
     private int maxKnowledge;
 
-    public Hero(String name, int might, int speed, int sanity, int knowledge, String species, int maxMight, int maxSpeed, int maxSanity, int maxKnowledge, String image) {
-        super(name, might, speed, sanity, knowledge, species, image);
+    @Column(name = "profession")
+    private String profession;
+
+
+    @Column(name = "age")
+    private int age;
+
+    public Hero(String name, int might, int speed, int sanity, int knowledge, String race, int maxMight, int maxSpeed, int maxSanity, int maxKnowledge, String image, String profession, int age) {
+        super(name, might, speed, sanity, knowledge, race, image);
         this.maxMight = maxMight;
         this.maxSpeed = maxSpeed;
         this.maxSanity = maxSanity;

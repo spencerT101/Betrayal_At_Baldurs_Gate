@@ -25,8 +25,8 @@ public abstract class Character {
     @Column(name = "knowledge")
     private int knowledge;
 
-    @Column(name = "species")
-    private String species;
+    @Column(name = "race")
+    private String race;
 
     @Column(name = "image")
     private String image;
