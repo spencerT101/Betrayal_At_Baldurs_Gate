@@ -17,7 +17,7 @@ public class OmenCardController {
     OmenCardRepository omenCardRepository;
 
 
-    @GetMapping(value = "/street_tiles")
+    @GetMapping(value = "/omen_cards")
     public ResponseEntity<List<OmenCard>> getAllOmenCards(){
         return new ResponseEntity<>(omenCardRepository.findAll(), HttpStatus.OK);
     }
