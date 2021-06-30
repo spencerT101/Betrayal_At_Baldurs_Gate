@@ -22,8 +22,7 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     MonsterRepository monsterRepository;
 
-    @Autowired
-    TileRepository tileRepository;
+
 
     @Autowired
     HeroRepository heroRepository;

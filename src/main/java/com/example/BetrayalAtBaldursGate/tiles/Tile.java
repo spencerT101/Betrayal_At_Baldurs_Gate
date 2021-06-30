@@ -3,7 +3,7 @@ import com.example.BetrayalAtBaldursGate.characters.Hero;
 import javax.persistence.*;
 import java.util.ArrayList;
 
-@Entity
+@MappedSuperclass
 public abstract class Tile {
 
     @Id
