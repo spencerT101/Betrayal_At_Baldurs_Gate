@@ -75,11 +75,17 @@ public class DataLoader implements ApplicationRunner {
         EventCard desiccatedHeart = new EventCard("You find a shriveled ", "Demonic Possession", "You must attempt a Sainty roll. Add 1 to the result if your adventurer is a drow. 6+ you overwhelm the demon. Gain 1 in a trait of your choice. 3-5 You battle to a draw. Nothing happens. 1-2 It takes a piece of your mind with it. Lose 1 Sanity. 0 You remember everything as the demon forces you to kill an innocent. Lose 2 Sanity");
         eventCardRepository.save(desiccatedHeart);
 
+        EventCard shamblingForm = new EventCard("A drunkard staggers toward you through the night. As the form draws near, you see to your horror that it is actually a bloated shambling zombie","Shambling Form","You must attempt a Speed roll: 4= You dodge the zombie, evading its reach just before it explodes in a burst of slime and pus. You find a useful item in the remains. Draw an item card. 2-3 You attempt to flee but are caught in the shower of gore as the zombie bursts. Lose 1 Speed. 0-1 The zombie grabs you and explodes messily. Lose 1 Might.");
+        eventCardRepository.save(shamblingForm);
 
-        EventCard
+        EventCard soundOfLoomingDoom = new EventCard("You hear a low growl. Glowing red eyes pierce the darkness ahead. Out from the shadows glides a large yeth hound, but its face looks less like a dog's and more like yours.","Sound of Looming Doom","Each adventurer must attempt a Speed rool. If there is a tie for the highest or lowest, the tied adventurers roll again until there is no tie. The highest roller gains 1 Speed. The lowest roller is attacked by the yeth hound. The player to their right rolls a Speed 3 attack for the yeth hound. They defend with Speed.");
+        eventCardRepository.save(soundOfLoomingDoom);
+
+        EventCard stalkingShadow = new EventCard("Your shadow seems to flicker and dance, moving of its own accord as it coalesces into a horrid humanoid shape that lunges at you.", "Stalking Shadow", "You must attempt a Speed roll: 4+ You dodge the shadow and escape its clutches. 2-3 The shadow grabs you, and deadening cold flows through your lower body. Lose 1 Speed.");
+        eventCardRepository.save(stalkingShadow);
 
         EventCard testOfTheDeadThree = new EventCard("Three spectral images appear before you: a sinister warrior clad in armour; a shriveled, skeletal mage in robes; and a sneering man who carries a bloody dagger. You sense they are here to test you.","Test of the Dead Three","You must attempt a sparate roll for each of Might, Speed, and Knowledge: 2+ That trait is unaffected. 0-1 Lose 1 from that trait. If you roll 2 or higher for all 3 rolls, gain 1 in one of those traits of your choice");
-        eventCardRepository.save(testOfTheDeadThree;
+        eventCardRepository.save(testOfTheDeadThree);
 
         EventCard theGreenDevilFace = new EventCard("The green stone face of devilish countenance protrudes from the wall. Its mouth is agape and filled with utter darkness. The darkness beckons you.","The Green Devil Face","You reach into the darkness. Roll 4 dice: 5+ You find something inside! Draw an item card. 3-4 Nothing happens. 1-2 You are teleported away. Discard all item cards you control and place your adventurer on the Elfsong Tavern tile. Lose 1 Sanity as your clothes didn't come with you. 0 If the haunt hasn't begun, treat this roll as a 1. Otherwise, the sphere of annihilation within the darkness kills you. You die.");
         eventCardRepository.save(theGreenDevilFace);
