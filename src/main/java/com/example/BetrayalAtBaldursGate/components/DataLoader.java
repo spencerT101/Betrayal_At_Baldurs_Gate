@@ -98,6 +98,23 @@ public class DataLoader implements ApplicationRunner {
                         "Make a haunt roll now.");
         omenCardRepository.save(ironFlaskOfTuerney);
 
+        OmenCard homonculus = new OmenCard("Companion: A pitiable, misshapen humanoid figure formed from clay, no more than a foot tall, emerges from the shadows and stares at you with black, unblinking eyes.",
+                "Homunculus",
+                "Gain 1 Might and 1 Knowledge" +
+                        "Lose 1 Might and 1 Knowledge if you lose control of the Homunculus" +
+                        "This omen can't be dropped, traded, or stolen" +
+                        "Make a haunt roll now.");
+        omenCardRepository.save(homonculus);
+
+        OmenCard figurineOfWonder = new OmenCard("Companion: The small ebony statuette, shaped like a fly, fits in the palm of your hand",
+                "Figurine of Wonderous Power",
+                "The figurine transforms into a giant fly that stays with you and protects you.Once per game, when you take any amount of damage, you may ignore that damage instead." +
+                        "This omen can't be dropped, traded, or stolen." +
+                        "Make a haunt roll now.");
+        omenCardRepository.save(figurineOfWonder);
+
+
+
 
 
 
