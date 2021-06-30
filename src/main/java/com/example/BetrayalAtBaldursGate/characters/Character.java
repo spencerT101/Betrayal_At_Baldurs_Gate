@@ -3,7 +3,7 @@ import javax.persistence.*;
 
 
 @MappedSuperclass
-
+//Tesntgfg
 public abstract class Character {
 
     @Id
