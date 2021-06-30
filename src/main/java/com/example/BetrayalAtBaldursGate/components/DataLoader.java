@@ -59,7 +59,8 @@ public class DataLoader implements ApplicationRunner {
 
         OmenCard whisperingSkull = new OmenCard ("A small skull carved from jade. You hear vague, distant whispers as you look into it's empty eyes",
                 "Whispering Skull",
-                "Once during your turn after the haunt has begun, you mat move 1 small monster or NPC 1 space.");
+                "Once during your turn after the haunt has begun, you mat move 1 small monster or NPC 1 space." +
+                        "Make a haunt roll now.");
         omenCardRepository.save(whisperingSkull);
 
         OmenCard symbolOfBhaal = new OmenCard("This sinister holy symbol is covered in blood. You feel your temperature begin to rise as you handle it",
@@ -68,8 +69,19 @@ public class DataLoader implements ApplicationRunner {
                 "2 the symbol pulses with power.Gain 1 Might. " +
                 "1 You feel...nothing. " +
                 "0 If you killed that adventurer, nothing happens." +
-                "Otherwise, take 1 die of mental damage.");
+                "Otherwise, take 1 die of mental damage." +
+                        "Make a haunt roll now");
         omenCardRepository.save(symbolOfBhaal);
+
+        OmenCard pipesOfHaunting = new OmenCard("The spellbing tune created by this instrument causes those around to relive their worst fears",
+                "Pipes of Haunting",
+                "You may use this omen to play the pipes during your turn after the haunt" +
+                        "If you do, each adventurer, small monster, and NPC within 2 tiles of you must attempt a Sanity 4+ roll" +
+                        "If they do not have a Sanity trait, or they fail the roll, you may move them 1 space away from you if possible (they cannot discover a new tile with that movement)" +
+                        "Make a haunt roll now.");
+        omenCardRepository.save(pipesOfHaunting);
+
+
 
 
 
