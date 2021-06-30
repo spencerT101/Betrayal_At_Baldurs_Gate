@@ -73,13 +73,21 @@ public class DataLoader implements ApplicationRunner {
                         "Make a haunt roll now");
         omenCardRepository.save(symbolOfBhaal);
 
-        OmenCard pipesOfHaunting = new OmenCard("The spellbing tune created by this instrument causes those around to relive their worst fears",
+        OmenCard pipesOfHaunting = new OmenCard("The spellbinding tune created by this instrument causes those around to relive their worst fears",
                 "Pipes of Haunting",
                 "You may use this omen to play the pipes during your turn after the haunt" +
                         "If you do, each adventurer, small monster, and NPC within 2 tiles of you must attempt a Sanity 4+ roll" +
                         "If they do not have a Sanity trait, or they fail the roll, you may move them 1 space away from you if possible (they cannot discover a new tile with that movement)" +
                         "Make a haunt roll now.");
         omenCardRepository.save(pipesOfHaunting);
+
+        OmenCard meenLock= new OmenCard("A strange, horrid fey creature lurks in the shadows, filling your mind with terror",
+                "Meenlock","Gain 2 Speed." +
+                "When you take physical damage, you must apply it as mental damage instead" +
+                "Lose 2 Speed if you loase control of the Meenlock" +
+                "This omen can't be dropped, traded, or stolen" +
+                "Make a haunt roll now");
+        omenCardRepository.save(meenLock);
 
 
 
