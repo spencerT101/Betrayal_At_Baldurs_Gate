@@ -1,9 +1,17 @@
 package com.example.BetrayalAtBaldursGate.characters;
+import javax.persistence.*;
 
 
-public class Hero extends Character {
+@Entity
+@Table(name = "heroes")
+public class
 
+Hero extends Character {
+
+    @Column(name = "max_might")
     private int maxMight;
+
+    @Column(name = "max_speed")
     private int maxSpeed;
     private int maxSanity;
     private int maxKnowledge;

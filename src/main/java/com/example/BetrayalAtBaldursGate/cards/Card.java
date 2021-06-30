@@ -2,8 +2,7 @@ package com.example.BetrayalAtBaldursGate.cards;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "cards")
+@MappedSuperclass
 public abstract class Card {
 
 

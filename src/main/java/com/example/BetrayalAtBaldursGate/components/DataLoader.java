@@ -6,6 +6,7 @@ import com.example.BetrayalAtBaldursGate.characters.Hero;
 import com.example.BetrayalAtBaldursGate.characters.Monster;
 import com.example.BetrayalAtBaldursGate.repositories.*;
 import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
+import com.example.BetrayalAtBaldursGate.tiles.Door;
 import com.example.BetrayalAtBaldursGate.tiles.Icon;
 import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
 import org.springframework.beans.factory.annotation.Autowired;
