@@ -47,7 +47,7 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run(ApplicationArguments args) {
-        Hero Gretchen = new Hero("Gretchen Titchwillow", 4, 4, 4,3, "halfling", 8,8,6,8,"image");
+        Hero Gretchen = new Hero("Gretchen Titchwillow", 4, 4, 4,3, "Halfling", 8,8,6,8,"image", "Druid", 112);
         heroRepository.save(Gretchen);
 
         Monster monster = new Monster("Test", 4, 4, 4, 4, "Test", "test");
@@ -59,10 +59,10 @@ public class DataLoader implements ApplicationRunner {
         StreetTile ambushAlley = new StreetTile("Ambush Alley", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE,Icon.EVENT);
         streetTileRepository.save(ambushAlley);
 
-        OmenCard omenCard = new OmenCard("Test");
+        OmenCard omenCard = new OmenCard("Care Bear Vision","Bartholomew","Care bears rule!");
         omenCardRepository.save(omenCard);
 
-        EventCard eventCard = new EventCard("Death Vision");
+        EventCard eventCard = new EventCard("Death Vision", "Barry", "text example");
         eventCardRepository.save(eventCard);
 
     }

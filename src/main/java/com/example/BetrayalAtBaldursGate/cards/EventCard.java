@@ -5,8 +5,8 @@ import javax.persistence.*;
 @Table(name = "event_cards")
 public class EventCard extends Card{
 
-    public EventCard(String flavourText) {
-        super(flavourText);
+    public EventCard(String flavourText, String name, String functionText) {
+        super(flavourText, name, functionText);
     }
 
     public EventCard() {

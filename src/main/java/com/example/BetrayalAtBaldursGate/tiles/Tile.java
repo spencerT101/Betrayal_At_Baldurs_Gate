@@ -1,5 +1,7 @@
 package com.example.BetrayalAtBaldursGate.tiles;
 import com.example.BetrayalAtBaldursGate.characters.Hero;
+import com.example.BetrayalAtBaldursGate.characters.Monster;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 
@@ -29,6 +31,8 @@ public abstract class Tile {
     private Icon icon;
 
     private ArrayList<Hero> heroes;
+
+    private ArrayList<Monster> monsters;
 
     public Tile(String name,Door northDoor, Door eastDoor, Door southDoor, Door westDoor, Icon icon) {
         this.name = name;
@@ -100,5 +104,19 @@ public abstract class Tile {
         this.icon = icon;
     }
 
+    public ArrayList<Hero> getHeroes() {
+        return heroes;
+    }
 
+    public void setHeroes(ArrayList<Hero> heroes) {
+        this.heroes = heroes;
+    }
+
+    public ArrayList<Monster> getMonsters() {
+        return monsters;
+    }
+
+    public void setMonsters(ArrayList<Monster> monsters) {
+        this.monsters = monsters;
+    }
 }

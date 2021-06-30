@@ -26,6 +26,8 @@ Hero extends Character {
         this.maxSpeed = maxSpeed;
         this.maxSanity = maxSanity;
         this.maxKnowledge = maxKnowledge;
+        this.profession = profession;
+        this.age = age;
     }
 
     public Hero() {
@@ -61,5 +63,21 @@ Hero extends Character {
 
     public void setMaxKnowledge(int maxKnowledge) {
         this.maxKnowledge = maxKnowledge;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

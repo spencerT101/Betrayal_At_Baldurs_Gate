@@ -32,13 +32,13 @@ public abstract class Character {
     private String image;
 
 
-    public Character(String name, int might, int speed, int sanity, int knowledge, String species, String image) {
+    public Character(String name, int might, int speed, int sanity, int knowledge, String race, String image) {
         this.name = name;
         this.might = might;
         this.speed = speed;
         this.sanity = sanity;
         this.knowledge = knowledge;
-        this.species = species;
+        this.race = race;
         this.image = image;
     }
 
@@ -93,12 +93,19 @@ public abstract class Character {
         this.knowledge = knowledge;
     }
 
-    public String getSpecies() {
-        return species;
+    public String getRace() {
+        return race;
     }
 
-    public void setSpecies(String species) {
-        this.species = species;
+    public void setRace(String race) {
+        this.race = race;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }
