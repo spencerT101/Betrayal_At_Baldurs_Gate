@@ -57,8 +57,22 @@ public class DataLoader implements ApplicationRunner {
         StreetTile ambushAlley = new StreetTile("Ambush Alley", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE,Icon.EVENT);
         streetTileRepository.save(ambushAlley);
 
-        OmenCard whisperingSkull = new OmenCard ("A small skull carved from jade. You hear vague, distant whispers as you look into it's empty eyes", "Whispering Skull","Once during your turn after the haunt has begun, you mat move 1 small monster or NPC 1 space.");
+        OmenCard whisperingSkull = new OmenCard ("A small skull carved from jade. You hear vague, distant whispers as you look into it's empty eyes",
+                "Whispering Skull",
+                "Once during your turn after the haunt has begun, you mat move 1 small monster or NPC 1 space.");
         omenCardRepository.save(whisperingSkull);
+
+        OmenCard symbolOfBhaal = new OmenCard("This sinister holy symbol is covered in blood. You feel your temperature begin to rise as you handle it",
+                "Symbol of Bhaal",
+                "After the haunt begins, whenever an adventurer is killed, roll a die. " +
+                "2 the symbol pulses with power.Gain 1 Might. " +
+                "1 You feel...nothing. " +
+                "0 If you killed that adventurer, nothing happens." +
+                "Otherwise, take 1 die of mental damage.");
+        omenCardRepository.save(symbolOfBhaal);
+
+
+
 
     }
 }
