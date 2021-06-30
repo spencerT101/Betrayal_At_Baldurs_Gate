@@ -75,7 +75,7 @@ public abstract class Tile {
         return eastDoor;
     }
 
-    public void setEastDoor(Boolean eastDoor) {
+    public void setEastDoor(Door eastDoor) {
         this.eastDoor = eastDoor;
     }
 
@@ -83,15 +83,15 @@ public abstract class Tile {
         return southDoor;
     }
 
-    public void setSouthDoor(Boolean southDoor) {
+    public void setSouthDoor(Door southDoor) {
         this.southDoor = southDoor;
     }
 
-    public Boolean getWestDoor() {
+    public Door getWestDoor() {
         return westDoor;
     }
 
-    public void setWestDoor(Boolean westDoor) {
+    public void setWestDoor(Door westDoor) {
         this.westDoor = westDoor;
     }
 
