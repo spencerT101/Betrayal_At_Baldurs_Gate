@@ -72,13 +72,19 @@ public class DataLoader implements ApplicationRunner {
         EventCard demonicPossession = new EventCard("You find an obsidian idol sticking out the ground. As you attempt to dislodge it, the demon trapped within tries to possess you", "Demonic Possession", "You must attempt a Sainty roll. Add 1 to the result if your adventurer is a drow. 6+ you overwhelm the demon. Gain 1 in a trait of your choice. 3-5 You battle to a draw. Nothing happens. 1-2 It takes a piece of your mind with it. Lose 1 Sanity. 0 You remember everything as the demon forces you to kill an innocent. Lose 2 Sanity");
         eventCardRepository.save(demonicPossession);
 
+        EventCard desiccatedHeart = new EventCard("You find a shriveled ", "Demonic Possession", "You must attempt a Sainty roll. Add 1 to the result if your adventurer is a drow. 6+ you overwhelm the demon. Gain 1 in a trait of your choice. 3-5 You battle to a draw. Nothing happens. 1-2 It takes a piece of your mind with it. Lose 1 Sanity. 0 You remember everything as the demon forces you to kill an innocent. Lose 2 Sanity");
+        eventCardRepository.save(desiccatedHeart);
+
+
+        EventCard
+
         EventCard testOfTheDeadThree = new EventCard("Three spectral images appear before you: a sinister warrior clad in armour; a shriveled, skeletal mage in robes; and a sneering man who carries a bloody dagger. You sense they are here to test you.","Test of the Dead Three","You must attempt a sparate roll for each of Might, Speed, and Knowledge: 2+ That trait is unaffected. 0-1 Lose 1 from that trait. If you roll 2 or higher for all 3 rolls, gain 1 in one of those traits of your choice");
-        eventCardRepository.save(testOfTheDeadThree
+        eventCardRepository.save(testOfTheDeadThree;
 
         EventCard theGreenDevilFace = new EventCard("The green stone face of devilish countenance protrudes from the wall. Its mouth is agape and filled with utter darkness. The darkness beckons you.","The Green Devil Face","You reach into the darkness. Roll 4 dice: 5+ You find something inside! Draw an item card. 3-4 Nothing happens. 1-2 You are teleported away. Discard all item cards you control and place your adventurer on the Elfsong Tavern tile. Lose 1 Sanity as your clothes didn't come with you. 0 If the haunt hasn't begun, treat this roll as a 1. Otherwise, the sphere of annihilation within the darkness kills you. You die.");
         eventCardRepository.save(theGreenDevilFace);
 
-        EventCard theStorm = new EventCard("It starts with a sinlge flash, then another. Soon the night is lit by a thousand streaks of lightning.","The Storm" ,"Every adventurer on a street tile must immediately use their Speed to move onto the closest building tile if possible. Each of those advenuters then rolls dice equal to the total spaces they moved (maximum of 8 dice). If they couldn't move onto a building tile they roll 8 dice. 6+ Take 2 dice of physical damage. 4-5 Take 1 die of physical damage. 2-3 Take 1 point of physical damage. 0-1 You got lucky. This time.");
+        EventCard theStorm = new EventCard("It starts with a single flash, then another. Soon the night is lit by a thousand streaks of lightning.","The Storm" ,"Every adventurer on a street tile must immediately use their Speed to move onto the closest building tile if possible. Each of those advenuters then rolls dice equal to the total spaces they moved (maximum of 8 dice). If they couldn't move onto a building tile they roll 8 dice. 6+ Take 2 dice of physical damage. 4-5 Take 1 die of physical damage. 2-3 Take 1 point of physical damage. 0-1 You got lucky. This time.");
         eventCardRepository.save(theStorm);
 
         EventCard trapper = new EventCard("The wall here looks strange, as if covered with slime. When you step closer to investigate, it curls around you in a crushing grip.","Trapper","You must attempt a Might roll: 4+ You break free and slay the trapper with one mighty blow. Draw an item card. 1-3 You pull free from the trapper's grip and escape. Take 1 die of physical damage. 0 You are trapped! Take 1 die of physical damage and your turn ends. Keep this card in front of you. Repeat this Might roll at the start of your next turn, adding 1 die to the roll for each adventurer on your tile. Discard this card unless you roll 0 again.");
