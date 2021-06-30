@@ -1,12 +1,9 @@
 package com.example.BetrayalAtBaldursGate.tiles;
-
-import com.example.BetrayalAtBaldursGate.games.GameState;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import com.example.BetrayalAtBaldursGate.characters.Hero;
 import javax.persistence.*;
+import java.util.ArrayList;
 
-@Entity
-@Table(name = "tiles")
+@MappedSuperclass
 public abstract class Tile {
 
     @Id
@@ -17,29 +14,30 @@ public abstract class Tile {
     private String name;
 
     @Column(name = "north_door")
-    private Boolean northDoor;
+    private Door northDoor;
 
     @Column(name = "east_door")
-    private Boolean eastDoor;
+    private Door eastDoor;
 
     @Column(name = "south_door")
-    private Boolean southDoor;
+    private Door southDoor;
 
     @Column (name = "west_door")
-    private Boolean westDoor;
+    private Door westDoor;
 
     @Column(name = "icon")
     private Icon icon;
 
+    private ArrayList<Hero> heroes;
 
-
-    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon, ) {
+    public Tile(String name,Door northDoor, Door eastDoor, Door southDoor, Door westDoor, Icon icon) {
         this.name = name;
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
         this.southDoor = southDoor;
         this.westDoor = westDoor;
         this.icon = icon;
+        this.heroes = new ArrayList<>();
 
     }
 
@@ -62,35 +60,35 @@ public abstract class Tile {
         this.name = name;
     }
 
-    public Boolean getNorthDoor() {
+    public Door getNorthDoor() {
         return northDoor;
     }
 
-    public void setNorthDoor(Boolean northDoor) {
+    public void setNorthDoor(Door northDoor) {
         this.northDoor = northDoor;
     }
 
-    public Boolean getEastDoor() {
+    public Door getEastDoor() {
         return eastDoor;
     }
 
-    public void setEastDoor(Boolean eastDoor) {
+    public void setEastDoor(Door eastDoor) {
         this.eastDoor = eastDoor;
     }
 
-    public Boolean getSouthDoor() {
+    public Door getSouthDoor() {
         return southDoor;
     }
 
-    public void setSouthDoor(Boolean southDoor) {
+    public void setSouthDoor(Door southDoor) {
         this.southDoor = southDoor;
     }
 
-    public Boolean getWestDoor() {
+    public Door getWestDoor() {
         return westDoor;
     }
 
-    public void setWestDoor(Boolean westDoor) {
+    public void setWestDoor(Door westDoor) {
         this.westDoor = westDoor;
     }
 
@@ -102,11 +100,5 @@ public abstract class Tile {
         this.icon = icon;
     }
 
-    public GameState getGameState() {
-        return gameState;
-    }
 
-    public void setGameState(GameState gameState) {
-        this.gameState = gameState;
-    }
 }

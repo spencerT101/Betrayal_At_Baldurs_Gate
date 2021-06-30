@@ -1,5 +1,6 @@
 package com.example.BetrayalAtBaldursGate;
 
+import com.example.BetrayalAtBaldursGate.tiles.Door;
 import com.example.BetrayalAtBaldursGate.tiles.Icon;
 import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
 import org.junit.Before;
@@ -14,7 +15,7 @@ public class StreetTileTest {
 
     @Before
     public void setup(){
-        streetTile1 = new StreetTile("Tile",true, false, false, false, Icon.EVENT);
+        streetTile1 = new StreetTile("Tile", Door.FALSE, Door.RED, Door.YELLOW, Door.RED, Icon.EVENT);
     }
 
     @Test
