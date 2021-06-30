@@ -17,23 +17,23 @@ public abstract class Tile {
     private String name;
 
     @Column(name = "north_door")
-    private Boolean northDoor;
+    private Door northDoor;
 
     @Column(name = "east_door")
-    private Boolean eastDoor;
+    private Door eastDoor;
 
     @Column(name = "south_door")
-    private Boolean southDoor;
+    private Door southDoor;
 
     @Column (name = "west_door")
-    private Boolean westDoor;
+    private Door westDoor;
 
     @Column(name = "icon")
     private Icon icon;
 
     private ArrayList<Hero> heroes;
 
-    public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon) {
+    public Tile(String name,Door northDoor, Door eastDoor, Door southDoor, Door westDoor, Icon icon) {
         this.name = name;
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
@@ -63,15 +63,15 @@ public abstract class Tile {
         this.name = name;
     }
 
-    public Boolean getNorthDoor() {
+    public Door getNorthDoor() {
         return northDoor;
     }
 
-    public void setNorthDoor(Boolean northDoor) {
+    public void setNorthDoor(Door northDoor) {
         this.northDoor = northDoor;
     }
 
-    public Boolean getEastDoor() {
+    public Door getEastDoor() {
         return eastDoor;
     }
 
@@ -79,7 +79,7 @@ public abstract class Tile {
         this.eastDoor = eastDoor;
     }
 
-    public Boolean getSouthDoor() {
+    public Door getSouthDoor() {
         return southDoor;
     }
 
