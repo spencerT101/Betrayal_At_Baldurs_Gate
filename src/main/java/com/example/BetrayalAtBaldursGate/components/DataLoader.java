@@ -65,5 +65,7 @@ public class DataLoader implements ApplicationRunner {
         EventCard eventCard = new EventCard("Death Vision", "Barry", "text example");
         eventCardRepository.save(eventCard);
 
+        OmenCard berserkerAxe = ()
+
     }
 }
