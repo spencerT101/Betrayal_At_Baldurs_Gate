@@ -63,9 +63,26 @@ public class DataLoader implements ApplicationRunner {
         EventCard craniumRats = new EventCard("A horde of rats emerge from their burrows to surround you. Their overgrown, pulsating brains extrude from their skulls. Theireyes glow red and you feel their minds link in an overwhelming force that reaches into your brains to root through your memories ", "Cranium Rats", "You must attempt a Sanity roll: 4+ You overwhelm the rats and loot their minds gain 1 Sanity. 2-3 They find what they were looking for. Lose 1 Knowledge. 0-1 you were unprepared for the assault. Take 1 die of Mental damage.  ");
         eventCardRepository.save(craniumRats);
 
-        EventCard trapper = new EventCard("","","");
-        event
+        EventCard crawlingClaw = new EventCard("A severed hand drops from above and grabs your neck. You grasp and wheeze as it crushes your throat in an iron grip", "Crawling Claw", "You must attempt a Might roll: 4+ You tear the crawling claw from your throat. 0-3 You cant get the crawling claw off. Keep this card. Take 1 point of physical damage at the end of each of your turns. Discard this card the next time you increase any traits or if you end your turn on the Weapon Shop building tile or following catacomb tiles, Assassin's Run, Beast's Lair, Gladiators Pit, Kitchen Basement or Weapon Ship basement. ");
+        eventCardRepository.save(crawlingClaw);
 
+        EventCard deathVision = new EventCard("A huge horde of bugs gather in a pile. They flee as you approach, revealing your own half-eaten corpse", "Death Vision", "You must attempt a Sanity Roll. 4+ It was just a horrible vision. Gain 1 Sanity. 2-3 The image disturbs you. Lose 1 Sanity. 0-1 You scream as the buds swarm over you take 1 die of physical damage");
+        eventCardRepository.save(deathVision);
+
+        EventCard demonicPossession = new EventCard("You find an obsidian idol sticking out the ground. As you attempt to dislodge it, the demon trapped within tries to possess you", "Demonic Possession", "You must attempt a Sainty roll. Add 1 to the result if your adventurer is a drow. 6+ you overwhelm the demon. Gain 1 in a trait of your choice. 3-5 You battle to a draw. Nothing happens. 1-2 It takes a piece of your mind with it. Lose 1 Sanity. 0 You remember everything as the demon forces you to kill an innocent. Lose 2 Sanity");
+        eventCardRepository.save(demonicPossession);
+
+        EventCard testOfTheDeadThree = new EventCard("Three spectral images appear before you: a sinister warrior clad in armour; a shriveled, skeletal mage in robes; and a sneering man who carries a bloody dagger. You sense they are here to test you.","Test of the Dead Three","You must attempt a sparate roll for each of Might, Speed, and Knowledge: 2+ That trait is unaffected. 0-1 Lose 1 from that trait. If you roll 2 or higher for all 3 rolls, gain 1 in one of those traits of your choice");
+        eventCardRepository.save(testOfTheDeadThree
+
+        EventCard theGreenDevilFace = new EventCard("The green stone face of devilish countenance protrudes from the wall. Its mouth is agape and filled with utter darkness. The darkness beckons you.","The Green Devil Face","You reach into the darkness. Roll 4 dice: 5+ You find something inside! Draw an item card. 3-4 Nothing happens. 1-2 You are teleported away. Discard all item cards you control and place your adventurer on the Elfsong Tavern tile. Lose 1 Sanity as your clothes didn't come with you. 0 If the haunt hasn't begun, treat this roll as a 1. Otherwise, the sphere of annihilation within the darkness kills you. You die.");
+        eventCardRepository.save(theGreenDevilFace);
+
+        EventCard theStorm = new EventCard("It starts with a sinlge flash, then another. Soon the night is lit by a thousand streaks of lightning.","The Storm" ,"Every adventurer on a street tile must immediately use their Speed to move onto the closest building tile if possible. Each of those advenuters then rolls dice equal to the total spaces they moved (maximum of 8 dice). If they couldn't move onto a building tile they roll 8 dice. 6+ Take 2 dice of physical damage. 4-5 Take 1 die of physical damage. 2-3 Take 1 point of physical damage. 0-1 You got lucky. This time.");
+        eventCardRepository.save(theStorm);
+
+        EventCard trapper = new EventCard("The wall here looks strange, as if covered with slime. When you step closer to investigate, it curls around you in a crushing grip.","Trapper","You must attempt a Might roll: 4+ You break free and slay the trapper with one mighty blow. Draw an item card. 1-3 You pull free from the trapper's grip and escape. Take 1 die of physical damage. 0 You are trapped! Take 1 die of physical damage and your turn ends. Keep this card in front of you. Repeat this Might roll at the start of your next turn, adding 1 die to the roll for each adventurer on your tile. Discard this card unless you roll 0 again.");
+        eventCardRepository.save(trapper);
 
         EventCard troglodyteStench = new EventCard("This area is filled with a sickening stench. Your head swims and your limbs suddenly feel as if they are carved from lead.","Troglodyte Stench","Place the square Stench token on this tile and this card near it. Adventurers who make Might rolls on this tile roll 2 fewer dice(minimum of 1 die).");
         eventCardRepository.save(troglodyteStench);
