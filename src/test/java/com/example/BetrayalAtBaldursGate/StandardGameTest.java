@@ -2,6 +2,7 @@ package com.example.BetrayalAtBaldursGate;
 
 import com.example.BetrayalAtBaldursGate.characters.Hero;
 import com.example.BetrayalAtBaldursGate.games.StandardGame;
+import com.example.BetrayalAtBaldursGate.tiles.Door;
 import com.example.BetrayalAtBaldursGate.tiles.Icon;
 import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
 import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
@@ -28,8 +29,8 @@ public class StandardGameTest {
     public void before(){
         gameOne = new StandardGame();
         hero1 = new Hero("Kieran", 3, 4, 4,2, "Human", 5, 5, 5, 5, "image");
-        streetTile1 = new StreetTile("Testy", true, false, true, true, Icon.EVENT);
-        buildingTile1 = new BuildingTile("Test", true, false, true, true, Icon.EVENT);
+        streetTile1 = new StreetTile("Testy", Door.YELLOW, Door.FALSE, Door.RED, Door.FALSE, Icon.EVENT);
+        buildingTile1 = new BuildingTile("Test", Door.RED, Door.FALSE, Door.RED, Door.FALSE, Icon.EVENT);
         omenCard1 = new OmenCard("Omen Text");
         eventCard1 = new EventCard("Event Text");
 
