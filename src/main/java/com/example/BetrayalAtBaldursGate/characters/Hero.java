@@ -13,7 +13,11 @@ Hero extends Character {
 
     @Column(name = "max_speed")
     private int maxSpeed;
+
+    @Column(name = "max_sanity")
     private int maxSanity;
+
+    @Column(name = "max_knowledge")
     private int maxKnowledge;
 
     public Hero(String name, int might, int speed, int sanity, int knowledge, String species, int maxMight, int maxSpeed, int maxSanity, int maxKnowledge, String image) {
