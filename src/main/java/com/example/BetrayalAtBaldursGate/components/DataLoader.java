@@ -113,6 +113,19 @@ public class DataLoader implements ApplicationRunner {
                         "Make a haunt roll now.");
         omenCardRepository.save(figurineOfWonder);
 
+        OmenCard eyeOfVecna = new OmenCard("Power at the cost of a single eye. A bargain to some, a curse to others",
+                "Eye of Vecna",
+                "Gain 1 Knowledge." +
+                        "Lose 1 Knowledge if you lose control of the Eye of Vecna" +
+                        "The Eye of Vecna grants you the power to inspire terror in others." +
+                        "If an opponent attempts to move onto the tile you occupy, you may have them attempt a roll 2+ with 2 dice." +
+                        "If they succeed, they enter your tile. If they fail, they stay on their current tile and end their movement for the turn." +
+                        "If they failed and rolled a 1, you also take 1 of mental damage." +
+                        "Make a haunt roll now");
+        omenCardRepository.save(eyeOfVecna);
+
+
+
 
 
 
