@@ -10,5 +10,6 @@ public class ItemCard extends Card{
         super(flavourText);
     }
 
-
+    public ItemCard() {
+    }
 }

@@ -8,4 +8,7 @@ public class EventCard extends Card{
     public EventCard(String flavourText) {
         super(flavourText);
     }
+
+    public EventCard() {
+    }
 }

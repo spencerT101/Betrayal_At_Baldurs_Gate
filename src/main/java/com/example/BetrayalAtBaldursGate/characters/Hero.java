@@ -28,6 +28,9 @@ Hero extends Character {
         this.maxKnowledge = maxKnowledge;
     }
 
+    public Hero() {
+    }
+
     public int getMaxMight() {
         return maxMight;
     }
