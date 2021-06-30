@@ -1,10 +1,9 @@
 package com.example.BetrayalAtBaldursGate.characters;
-
 import javax.persistence.*;
 
 
-@Entity
-@Table(name = "characters")
+@MappedSuperclass
+
 public abstract class Character {
 
     @Id

@@ -1,9 +1,9 @@
 package com.example.BetrayalAtBaldursGate.characters;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-import com.example.BetrayalAtBaldursGate.games.GameState;
-
-import java.util.ArrayList;
-
+@Entity
+@Table(name = "monsters")
 public class Monster extends Character{
 
 

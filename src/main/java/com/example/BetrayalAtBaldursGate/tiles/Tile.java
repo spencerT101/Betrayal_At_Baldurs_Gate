@@ -1,12 +1,9 @@
 package com.example.BetrayalAtBaldursGate.tiles;
-
 import com.example.BetrayalAtBaldursGate.characters.Hero;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 
 @Entity
-@Table(name = "tiles")
 public abstract class Tile {
 
     @Id
