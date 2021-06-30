@@ -6,6 +6,8 @@ import javax.persistence.*;
 @Table(name = "item_cards")
 public class ItemCard extends Card{
 
+
+
     public ItemCard(String flavourText){
         super(flavourText);
     }

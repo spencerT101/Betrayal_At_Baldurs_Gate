@@ -10,6 +10,8 @@ public class OmenCard extends Card{
         super(flavourText);
     }
 
+    public OmenCard() {
+    }
 
     public void hauntRoll(){
 
