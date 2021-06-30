@@ -82,12 +82,21 @@ public class DataLoader implements ApplicationRunner {
         omenCardRepository.save(pipesOfHaunting);
 
         OmenCard meenLock= new OmenCard("A strange, horrid fey creature lurks in the shadows, filling your mind with terror",
-                "Meenlock","Gain 2 Speed." +
+                "Meenlock",
+                "Gain 2 Speed." +
                 "When you take physical damage, you must apply it as mental damage instead" +
                 "Lose 2 Speed if you loase control of the Meenlock" +
                 "This omen can't be dropped, traded, or stolen" +
                 "Make a haunt roll now");
         omenCardRepository.save(meenLock);
+
+        OmenCard ironFlaskOfTuerney = new OmenCard("This iron flask shudders and quakes, as if something wants out",
+                "Iron Flask of Tuerny",
+                "Instead of attacking normally, you use this omen on your turn to open the flask, unleashing the balor trapped within" +
+                        "The demon makes a Might 6 attack against every adventurer, monster, and NPC on your tile, including yourself, before returning to the Abyss" +
+                        "This omen can be used only once per game" +
+                        "Make a haunt roll now.");
+        omenCardRepository.save(ironFlaskOfTuerney);
 
 
 
