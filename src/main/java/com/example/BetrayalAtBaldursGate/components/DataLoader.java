@@ -48,19 +48,30 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        EventCard aFlumphAppears = new EventCard("The strangest thing you've ever seen - a jellyfish with eyes - floats out of the corner, gesturing emphatically with its barbed tentacles", "A Flumph Appears", "You must attempt a knowledge roll: 4+ You discover a hidden treasure cache. Draw an item card, 2-3: You discover a hollow filled with spiders that swarm up your arm. Lose 1 might. 0-1 You find a Kobold catacomb title( or the Catacomb landing if the Kobold hideout isn't in play yet) Take 1 die of physical damage.");
+        EventCard aFlumphAppears = new EventCard("The strangest thing you've ever seen - a jellyfish with eyes - floats out of the corner, gesturing emphatically with its barbed tentacles", "A Flumph Appears", "You must attempt a knowledge roll: 4+ You discover a hidden treasure cache. Draw an item card, 2-3: You discover a hollow filled with spiders that swarm up your arm. Lose 1 Might. 0-1 You find a Kobold catacomb title( or the Catacomb landing if the Kobold hideout isn't in play yet) Take 1 die of Physical damage.");
         eventCardRepository.save(aFlumphAppears);
 
-        EventCard aHagsBlessing = new EventCard("A stooped figure clad in a tattered robe stumbles toward you. She studies you with milky cataract-filled eyes before pointing at you and speaking", "A Hag's Blessing", "Roll 2 dice: 4: She whispers forbidden love. Gain 1 knowledge, 3: She offers a spell of protection gain 1 Sanity. 3: She mutters incoherently before shuffling on. 1: She promises death and ruin, lose 1 sanity. 0: She curses you. The next time you would roll for anything except for the haunt treat the results as 0");
+        EventCard aHagsBlessing = new EventCard("A stooped figure clad in a tattered robe stumbles toward you. She studies you with milky cataract-filled eyes before pointing at you and speaking", "A Hag's Blessing", "Roll 2 dice: 4: She whispers forbidden love. Gain 1 Knowledge, 3: She offers a spell of protection gain 1 Sanity. 3: She mutters incoherently before shuffling on. 1: She promises death and ruin, lose 1 Sanity. 0: She curses you. The next time you would roll for anything except for the haunt treat the results as 0");
         eventCardRepository.save(aHagsBlessing);
 
         EventCard arcaneGate = new EventCard("A portal springs to life here, offering a shimmering passage to another location", "Arcane Gate", "Place 1 square Arcane Gate token on this tile, and the second square Arcane Gate token on any other tile on the board. An adventure, monster or NPC can move between those tiles with 1 space of movement");
         eventCardRepository.save(arcaneGate);
 
-        EventCard bhallsCall = new EventCard("You have a vision of a grotesque skull, or blood pools around your feet and your ears", "Bhaal's Call", "You must attempt a sanity roll: 4+ You find the vision oddly compelling, Gain 1 might. 2-3: Lose 1 sanity. 0-1: Your mind is attacked. If your mind is attacked, the player on your right rolls a Sanity 3 attacked against you. You dont roll defence. Instead, if the result is higher than your Sanity, you take mental damage equal to the difference between the two");
+        EventCard bhallsCall = new EventCard("You have a vision of a grotesque skull, or blood pools around your feet and your ears", "Bhaal's Call", "You must attempt a Sanity roll: 4+ You find the vision oddly compelling, Gain 1 Might. 2-3: Lose 1 Sanity. 0-1: Your mind is attacked. If your mind is attacked, the player on your right rolls a Sanity 3 attacked against you. You dont roll defence. Instead, if the result is higher than your Sanity, you take Mental damage equal to the difference between the two");
         eventCardRepository.save(bhallsCall);
 
-        EventCard vampiricMist = new EventCard("","","")
+        EventCard craniumRats = new EventCard("A horde of rats emerge from their burrows to surround you. Their overgrown, pulsating brains extrude from their skulls. Theireyes glow red and you feel their minds link in an overwhelming force that reaches into your brains to root through your memories ", "Cranium Rats", "You must attempt a Sanity roll: 4+ You overwhelm the rats and loot their minds gain 1 Sanity. 2-3 They find what they were looking for. Lose 1 Knowledge. 0-1 you were unprepared for the assault. Take 1 die of Mental damage.  ");
+        eventCardRepository.save(craniumRats);
+
+        EventCard trapper = new EventCard("","","");
+        event
+
+
+        EventCard troglodyteStench = new EventCard("This area is filled with a sickening stench. Your head swims and your limbs suddenly feel as if they are carved from lead.","Troglodyte Stench","Place the square Stench token on this tile and this card near it. Adventurers who make Might rolls on this tile roll 2 fewer dice(minimum of 1 die).");
+        eventCardRepository.save(troglodyteStench);
+
+        EventCard vampiricMist = new EventCard("Fog drifts towards you. A rat runs into it and you hear a loud squeak. As the fog wafts forward, you see the husk of the rodent.","Vampiric Mist","You must attempt a Knowledge roll: 4+ It's vampiric mist, get away! Gain 1 Speed. 0-3 It must only kill rats, you say to yourself as you walk through the fog. Take 1 point of physical damage.");
+        eventCardRepository.save(vampiricMist);
 
         EventCard wereratBite = new EventCard("You look down and see a fat, horrid-looking rat scamper away as you notice the pain in your foot. You suddenly don't feel so well.", "Wererat Bite", "You have been infected with lycanthropy. Keep this card in front of you. Lose 1 Knowledge and 1 Sanity. Gain 1 Might and Speed. If you inflict physical damage to an adventurer on your tile with an attack, you may choose to also infect them with lycanthropy. If you do, they lose 1 Knowledge and 1 Sanity, and gain 1 Might and 1 Speed. They can then infect other adventurers using the same rules. Each adventurer can be infected with lycanthropy only once per game.");
         eventCardRepository.save(wereratBite);
