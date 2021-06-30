@@ -8,8 +8,8 @@ public class ItemCard extends Card{
 
 
 
-    public ItemCard(String flavourText){
-        super(flavourText);
+    public ItemCard(String flavourText, String name, String functionText){
+        super(flavourText, name, functionText);
     }
 
     public ItemCard() {
