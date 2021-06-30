@@ -33,6 +33,8 @@ public abstract class Tile {
 
     private ArrayList<Hero> heroes;
 
+    private ArrayList<Hero> heroes;
+
     public Tile(String name,Boolean northDoor, Boolean eastDoor, Boolean southDoor, Boolean westDoor, Icon icon) {
         this.name = name;
         this.northDoor = northDoor;
@@ -103,11 +105,5 @@ public abstract class Tile {
         this.icon = icon;
     }
 
-    public GameState getGameState() {
-        return gameState;
-    }
 
-    public void setGameState(GameState gameState) {
-        this.gameState = gameState;
-    }
 }

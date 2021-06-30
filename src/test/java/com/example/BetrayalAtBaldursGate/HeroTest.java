@@ -16,7 +16,7 @@ public class HeroTest {
     @Before
     public void before() {
 
-        hero1 = new Hero("barry",5,6,7,8,"human",7,8,9,10);
+        hero1 = new Hero("barry",5,6,7,8,"human",7,8,9,10, "image");
 
     }
 

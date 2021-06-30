@@ -17,7 +17,7 @@ public abstract class Card {
 
     public Card(String flavourText) {
         this.flavourText = flavourText;
-        this.gameState = gameState;
+
     }
 
     public Card() {
@@ -39,11 +39,5 @@ public abstract class Card {
         this.flavourText = flavourText;
     }
 
-    public GameState getGameState() {
-        return gameState;
-    }
 
-    public void setGameState(GameState gameState) {
-        this.gameState = gameState;
-    }
 }

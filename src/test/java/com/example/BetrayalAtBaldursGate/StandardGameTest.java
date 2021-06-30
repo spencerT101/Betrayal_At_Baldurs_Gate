@@ -27,7 +27,7 @@ public class StandardGameTest {
     @Before
     public void before(){
         gameOne = new StandardGame();
-        hero1 = new Hero("Kieran", 3, 4, 4,2, "Human", 5, 5, 5, 5);
+        hero1 = new Hero("Kieran", 3, 4, 4,2, "Human", 5, 5, 5, 5, "image");
         streetTile1 = new StreetTile("Testy", true, false, true, true, Icon.EVENT);
         buildingTile1 = new BuildingTile("Test", true, false, true, true, Icon.EVENT);
         omenCard1 = new OmenCard("Omen Text");
