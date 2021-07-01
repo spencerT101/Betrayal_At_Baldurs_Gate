@@ -2,16 +2,11 @@ package com.example.BetrayalAtBaldursGate;
 
 import com.example.BetrayalAtBaldursGate.characters.Hero;
 import com.example.BetrayalAtBaldursGate.games.StandardGame;
-import com.example.BetrayalAtBaldursGate.tiles.Door;
-import com.example.BetrayalAtBaldursGate.tiles.Icon;
 import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
 import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
 import com.example.BetrayalAtBaldursGate.cards.OmenCard;
 import com.example.BetrayalAtBaldursGate.cards.EventCard;
 
-
-import org.junit.Before;
-import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 

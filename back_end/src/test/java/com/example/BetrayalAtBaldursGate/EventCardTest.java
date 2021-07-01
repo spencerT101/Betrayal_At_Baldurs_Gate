@@ -1,8 +1,6 @@
 package com.example.BetrayalAtBaldursGate;
 
 import com.example.BetrayalAtBaldursGate.cards.EventCard;
-import org.junit.Before;
-import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 

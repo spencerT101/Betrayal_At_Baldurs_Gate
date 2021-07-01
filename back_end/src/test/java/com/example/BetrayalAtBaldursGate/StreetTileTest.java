@@ -1,11 +1,5 @@
 package com.example.BetrayalAtBaldursGate;
 
-import com.example.BetrayalAtBaldursGate.tiles.Door;
-import com.example.BetrayalAtBaldursGate.tiles.Icon;
-import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
-import org.junit.Before;
-import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 public class StreetTileTest {

@@ -2,9 +2,6 @@ package com.example.BetrayalAtBaldursGate;
 
 import com.example.BetrayalAtBaldursGate.characters.Hero;
 import org.junit.Before;
-import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
