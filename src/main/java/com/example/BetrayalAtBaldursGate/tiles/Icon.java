@@ -4,7 +4,8 @@ public enum Icon{
 
     EVENT,
     ITEM,
-    OMEN
+    OMEN,
+    FALSE
 
 
 

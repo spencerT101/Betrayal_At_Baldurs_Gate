@@ -80,8 +80,35 @@ public class DataLoader implements ApplicationRunner {
         BuildingTile shrineToGargauth = new BuildingTile("Shrine To Gargauth", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.RED, Icon.OMEN);
         buildingTileRepository.save(shrineToGargauth);
 
-        BuildingTile smithy = new BuildingTile("Smithy", Door.YELLOW, Door.FALSE, Door.RED, Door.FALSE);
+        BuildingTile smithy = new BuildingTile("Smithy", Door.YELLOW, Door.FALSE, Door.RED, Door.FALSE, Icon.EVENT);
         buildingTileRepository.save(smithy);
+
+        BuildingTile sorcerousSundries = new BuildingTile("Sorcerous Sundries", Door.FALSE, Door.FALSE, Door.YELLOW, Door.RED, Icon.EVENT);
+        buildingTileRepository.save(sorcerousSundries);
+
+        BuildingTile spysRoost = new BuildingTile("Spy's Roost", Door.RED, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
+        buildingTileRepository.save(spysRoost);
+
+        BuildingTile storehouse = new BuildingTile("Storehouse", Door.RED, Door.RED, Door.RED, Door.RED, Icon.ITEM);
+        buildingTileRepository.save(storehouse);
+
+        BuildingTile templeOfUmberlee = new BuildingTile("Temple of Umberlee", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE, Icon.ITEM);
+        buildingTileRepository.save(templeOfUmberlee);
+
+        BuildingTile tradingPost = new BuildingTile("Trading Post", Door.FALSE, Door.FALSE, Door.YELLOW, Door.FALSE, Icon.EVENT);
+        buildingTileRepository.save(tradingPost);
+
+        BuildingTile warehouse = new BuildingTile("Warehouse", Door.RED, Door.YELLOW, Door.RED, Door.RED, Icon.ITEM);
+        buildingTileRepository.save(warehouse);
+
+        BuildingTile weaponShop = new BuildingTile("Weapon Shop", Door.YELLOW, Door.YELLOW, Door.RED, Door.RED, Icon.ITEM);
+        buildingTileRepository.save(weaponShop);
+
+        StreetTile ambushAlley = new StreetTile("Ambush Alley", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE, Icon.EVENT);
+        streetTileRepository.save(ambushAlley);
+
+        StreetTile belovedRangerStatue = new StreetTile("Beloved Ranger Statue", Door.YELLOW, Door.RED, Door.YELLOW, Door.RED, Icon.FALSE);
+        streetTileRepository.save(belovedRangerStatue);
 
         EventCard aFlumphAppears = new EventCard("The strangest thing you've ever seen - a jellyfish with eyes - floats out of the corner, gesturing emphatically with its barbed tentacles", "A Flumph Appears", "You must attempt a knowledge roll: 4+ You discover a hidden treasure cache. Draw an item card, 2-3: You discover a hollow filled with spiders that swarm up your arm. Lose 1 Might. 0-1 You find a Kobold catacomb title( or the Catacomb landing if the Kobold hideout isn't in play yet) Take 1 die of Physical damage.");
         eventCardRepository.save(aFlumphAppears);
@@ -279,18 +306,6 @@ public class DataLoader implements ApplicationRunner {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
