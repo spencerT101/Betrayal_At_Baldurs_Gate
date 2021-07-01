@@ -110,6 +110,42 @@ public class DataLoader implements ApplicationRunner {
         StreetTile belovedRangerStatue = new StreetTile("Beloved Ranger Statue", Door.YELLOW, Door.RED, Door.YELLOW, Door.RED, Icon.FALSE);
         streetTileRepository.save(belovedRangerStatue);
 
+        StreetTile cursedStatue = new StreetTile("Cursed Statue", Door.FALSE, Door.RED, Door.YELLOW, Door.FALSE, Icon.OMEN);
+        streetTileRepository.save(cursedStatue);
+
+        StreetTile deadEnd = new StreetTile("Dead End", Door.RED, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
+        streetTileRepository.save(deadEnd);
+
+        StreetTile executionersBlock = new StreetTile("Executioner's Block", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.RED, Icon.OMEN);
+        streetTileRepository.save(executionersBlock);
+
+        StreetTile fountain = new StreetTile("Fountain", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.YELLOW, Icon.FALSE);
+        streetTileRepository.save(fountain);
+
+        StreetTile grayHarbor = new StreetTile("Gray harbor", Door.YELLOW, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
+        streetTileRepository.save(grayHarbor);
+
+        StreetTile hauntedAlley = new StreetTile("Haunted Alley", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE, Icon.OMEN);
+        streetTileRepository.save(hauntedAlley);
+
+        StreetTile marketplace = new StreetTile("Marketplace", Door.FALSE, Door.YELLOW, Door.FALSE, Door.RED, Icon.ITEM);
+        streetTileRepository.save(marketplace);
+
+        StreetTile murderRow = new StreetTile("Murder Row", Door.RED, Door.FALSE, Door.FALSE, Door.RED, Icon.OMEN);
+        streetTileRepository.save(murderRow);
+
+        StreetTile rosePortal = new StreetTile("Rose Portal", Door.YELLOW, Door.YELLOW, Door.FALSE, Door.YELLOW, Icon.EVENT);
+        streetTileRepository.save(rosePortal);
+
+        StreetTile trashPile = new StreetTile("Trash Pile", Door.FALSE, Door.FALSE, Door.RED, Door.FALSE, Icon.EVENT);
+        streetTileRepository.save(trashPile);
+
+        StreetTile watchPost = new StreetTile("Watch Post", Door.FALSE, Door.RED, Door.FALSE, Door.RED, Icon.EVENT);
+        streetTileRepository.save(watchPost);
+
+        StreetTile waterfront = new StreetTile("Waterfront", Door.YELLOW, Door.FALSE, Door.RED, Door.FALSE, Icon.EVENT);
+        streetTileRepository.save(waterfront);
+
         EventCard aFlumphAppears = new EventCard("The strangest thing you've ever seen - a jellyfish with eyes - floats out of the corner, gesturing emphatically with its barbed tentacles", "A Flumph Appears", "You must attempt a knowledge roll: 4+ You discover a hidden treasure cache. Draw an item card, 2-3: You discover a hollow filled with spiders that swarm up your arm. Lose 1 Might. 0-1 You find a Kobold catacomb title( or the Catacomb landing if the Kobold hideout isn't in play yet) Take 1 die of Physical damage.");
         eventCardRepository.save(aFlumphAppears);
 
