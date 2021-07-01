@@ -10,13 +10,13 @@ public abstract class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "flavour_text")
+    @Column(name = "flavour_text", length = 750)
     private String flavourText;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "function_text")
+    @Column(name = "function_text", length = 750)
     private String functionText;
 
 
