@@ -47,6 +47,42 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
+        Hero azadeh = new Hero("Azadeh Rashka", 3, 4, 5, 3, "Human", 7, 8, 8, 5, "image", "Monk", 42);
+        heroRepository.save(azadeh);
+
+        Hero dhadius = new Hero("Dhadius The Scarlet", 2, 4, 4, 5, "Human", 6, 8, 8, 7, "image", "Wizard", 55);
+        heroRepository.save(dhadius);
+
+        Hero gretchen = new Hero("Gretchen Titchwillow", 4, 4, 4, 3, "Halfling", 8, 8, 6, 8, "image", "Druid", 112);
+        heroRepository.save(gretchen);
+
+        Hero grim = new Hero("'Grim' Grusk Mugtug", 4, 3, 4, 4, "Half-Ord", 6, 7, 8, 4, "image", "Paladin", 60);
+        heroRepository.save(grim);
+
+        Hero lia = new Hero("Lia Faen Tlabbar", 2, 3, 6, 4, "Drow", 7, 7, 8, 8, "image", "Warlock", 254);
+        heroRepository.save(lia);
+
+        Hero torskar = new Hero("Torskar Stonecleaver", 5, 4, 3, 3, "Dwarf", 8, 6, 7, 6, "image", "Barbarian", 130);
+        heroRepository.save(torskar);
+
+        BuildingTile felogyrsFireworks = new BuildingTile("Felogyr's Fireworks", Door.RED, Door.FALSE, Door.RED, Door.YELLOW, Icon.EVENT);
+        buildingTileRepository.save(felogyrsFireworks);
+
+        BuildingTile hallOfWonders = new BuildingTile("Hall of Wonders", Door.FALSE, Door.FALSE, Door.YELLOW, Door.RED, Icon.EVENT);
+        buildingTileRepository.save(hallOfWonders);
+
+        BuildingTile houseOfBlood = new BuildingTile("House of Blood", Door.RED, Door.RED, Door.RED, Door.RED, Icon.OMEN);
+        buildingTileRepository.save(houseOfBlood);
+
+        BuildingTile mansion = new BuildingTile("Mansion", Door.RED, Door.RED, Door.YELLOW, Door.FALSE, Icon.EVENT);
+        buildingTileRepository.save(mansion);
+
+        BuildingTile shrineToGargauth = new BuildingTile("Shrine To Gargauth", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.RED, Icon.OMEN);
+        buildingTileRepository.save(shrineToGargauth);
+
+        BuildingTile smithy = new BuildingTile("Smithy", Door.YELLOW, Door.FALSE, Door.RED, Door.FALSE);
+        buildingTileRepository.save(smithy);
+
         EventCard aFlumphAppears = new EventCard("The strangest thing you've ever seen - a jellyfish with eyes - floats out of the corner, gesturing emphatically with its barbed tentacles", "A Flumph Appears", "You must attempt a knowledge roll: 4+ You discover a hidden treasure cache. Draw an item card, 2-3: You discover a hollow filled with spiders that swarm up your arm. Lose 1 Might. 0-1 You find a Kobold catacomb title( or the Catacomb landing if the Kobold hideout isn't in play yet) Take 1 die of Physical damage.");
         eventCardRepository.save(aFlumphAppears);
 
