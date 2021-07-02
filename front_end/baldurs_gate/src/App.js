@@ -1,41 +1,50 @@
 import logo from './logo.svg';
 import './App.css';
+import GameBox from './containers/GameBox';
 import { useEffect, useState } from 'react';
+
 
 function App() {
 
-  const [text, setText] = useState([])
+//   const [text, setText] = useState([])
 
-  useEffect(() => {
-    setText()
+//   useEffect(() => {
+//     setText()
     
-  }, [])
+//   }, [])
 
- const sayHI = "http://localhost:8080/api/test/kieran"
+//  const sayHI = "http://localhost:8080/api/test/kieran"
 
- const fetchapi= function(){
-   fetch(sayHI)
-  .then(response => response.text())
-   .then(data => setText(data))
- }
+//  const fetchapi= function(){
+//    fetch(sayHI)
+//   .then(response => response.text())
+//    .then(data => setText(data))
+//  }
  
-const handleClick = (event) =>{
+// const handleClick = (event) =>{
   
-   console.log('hello gorgeous')
-   setText('hello gorgeous')
-}
+//    console.log('hello gorgeous')
+//    setText('hello gorgeous')
+// }
 
 
-  return (
-    <>
-    <div>
+//   return (
+//     <>
+//     <div>
 
-  <button onClick={fetchapi}>Hi</button>
-  <p>{text}</p>
+//   <button onClick={fetchapi}>Hi</button>
+//   <p>{text}</p>
 
-    </div>
-    </>
-  );
+//     </div>
+//     </>
+//   );
+
+return(
+<>
+  <GameBox/>
+</>
+);
+
 }
 
 export default App;
