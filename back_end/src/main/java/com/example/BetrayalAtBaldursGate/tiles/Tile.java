@@ -34,12 +34,21 @@ public abstract class Tile {
 
     private ArrayList<Monster> monsters;
 
+    private Tile north;
+    private Tile east;
+    private Tile south;
+    private Tile west;
+
     public Tile(String name,Door northDoor, Door eastDoor, Door southDoor, Door westDoor, Icon icon) {
         this.name = name;
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
         this.southDoor = southDoor;
         this.westDoor = westDoor;
+        this.north = null;
+        this.east = null;
+        this.south = null;
+        this.west = null;
         this.icon = icon;
         this.heroes = new ArrayList<>();
         this.monsters = new ArrayList<>();

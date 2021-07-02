@@ -35,6 +35,7 @@ public abstract class GameState {
     private ArrayList<StreetTile>streetTiles;
     private ArrayList<OmenCard> omenCards;
     private ArrayList<EventCard>eventCards;
+    private ArrayList<Tile> board;
 
 
     public GameState() {
@@ -45,6 +46,7 @@ public abstract class GameState {
         this.streetTiles = new ArrayList<>();
         this.omenCards = new ArrayList<>();
         this.eventCards = new ArrayList<>();
+        this.board = new ArrayList<>();
     }
 
     public int getRoundCounter() {

@@ -21,6 +21,17 @@ public class GameService {
     @Autowired
     ItemCardRepository itemCardRepository;
 
+    @Autowired
+    HeroRepository heroRepository;
+
+    @Autowired
+    MonsterRepository monsterRepository;
+
+    @Autowired
+    StandardGame game;
+
+
+
     public String helloSpencer(String name) {
         return "Testy " + name;
     }
