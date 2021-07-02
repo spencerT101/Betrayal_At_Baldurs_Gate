@@ -11,7 +11,7 @@ public class TestService {
     @Autowired
     TestRepository testRepository;
 
-    public String greet(String name) {
-        return "Hello " + name;
+    public String helloSpencer(String name) {
+        return "Testy " + name;
     }
 }

@@ -16,7 +16,7 @@ public class TestController {
 
     @GetMapping(value = "/test/{name}")
     public ResponseEntity sayHelloToName(@PathVariable String name) {
-          return new ResponseEntity<>(testService.greet(name), HttpStatus.OK);
+        return new ResponseEntity (testService.helloSpencer(name), HttpStatus.OK);
     }
 
 }
