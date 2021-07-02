@@ -120,4 +120,36 @@ public abstract class Tile {
     public void setMonsters(ArrayList<Monster> monsters) {
         this.monsters = monsters;
     }
+
+    public Tile getNorth() {
+        return north;
+    }
+
+    public void setNorth(Tile north) {
+        this.north = north;
+    }
+
+    public Tile getEast() {
+        return east;
+    }
+
+    public void setEast(Tile east) {
+        this.east = east;
+    }
+
+    public Tile getSouth() {
+        return south;
+    }
+
+    public void setSouth(Tile south) {
+        this.south = south;
+    }
+
+    public Tile getWest() {
+        return west;
+    }
+
+    public void setWest(Tile west) {
+        this.west = west;
+    }
 }

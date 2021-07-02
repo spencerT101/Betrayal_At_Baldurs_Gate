@@ -4,13 +4,29 @@ import com.example.BetrayalAtBaldursGate.cards.EventCard;
 import com.example.BetrayalAtBaldursGate.cards.OmenCard;
 import com.example.BetrayalAtBaldursGate.characters.Hero;
 import com.example.BetrayalAtBaldursGate.characters.Monster;
-import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
-import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
+import com.example.BetrayalAtBaldursGate.repositories.*;
+import com.example.BetrayalAtBaldursGate.tiles.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 
 
+
+
+
 public abstract class GameState {
+
+    HeroRepository heroRepository = new HeroRepository;
+    BuildingTileRepository buildingTileRepository = new BuildingTileRepository;
+    EventCardRepository eventCardRepository = new EventCardRepository;
+    ItemCardRepository itemCardRepository = new ItemCardRepository;
+    MonsterRepository monsterRepository = new MonsterRepository;
+    OmenCardRepository omenCardRepository = new OmenCardRepository;
+    StreetTileRepository streetTileRepository = new StreetTileRepository;
+    BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.RED, Icon.FALSE);
+    BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.RED, Door.RED, Door.RED, Door.RED, Icon.FALSE);
+    BuildingTile kitchen = new BuildingTile("Kitchen", Door.RED, Door.RED, Door.RED, Door.YELLOW, Icon.FALSE);
+
 
     private int roundCounter;
     private ArrayList<Hero> players;
@@ -107,4 +123,28 @@ public abstract class GameState {
         this.eventCards.add(eventCard);
     }
 
+    public ArrayList<Tile> getBoard() {
+        return board;
+    }
+
+    public void setBoard(ArrayList<Tile> board) {
+        this.board = board;
+    }
+
+    public void populateGame(){
+
+        heroRepository.findAllHeroes().forEach(player -> players.add(player));
+        monsterRepository.findAllMonsters().forEach(monster -> monsters.add(monster));
+        buildingTileRepository.findAllBuildingTiles().forEach(buildingTile -> buildingTiles.add(buildingTile));
+        streetTileRepository.findAllStreetTiles().forEach(streetTile -> streetTiles.add(streetTile));
+        omenCardRepository.findAllOmenCards().forEach(omenCard -> omenCards.add(omenCard));
+        eventCardRepository.findAllEventCards().forEach(eventCard -> eventCards.add(eventCard));
+        this.board.add(elfsongTavern);
+        elfsongTavern.setWest(innerChamber);
+        this.board.add(innerChamber);
+        innerChamber.setEast(elfsongTavern);
+        innerChamber.setWest(kitchen);
+        this.board.add(kitchen);
+        kitchen.setEast(innerChamber);
+    }
 }

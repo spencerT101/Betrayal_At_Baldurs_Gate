@@ -1,6 +1,6 @@
 package com.example.BetrayalAtBaldursGate.controllers;
 
-import com.example.BetrayalAtBaldursGate.services.TestService;
+import com.example.BetrayalAtBaldursGate.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    TestService testService;
+    GameService gameService;
 
     @GetMapping(value = "/test/{name}")
     public ResponseEntity sayHelloToName(@PathVariable String name) {
-        return new ResponseEntity (testService.helloSpencer(name), HttpStatus.OK);
+        return new ResponseEntity (gameService.helloSpencer(name), HttpStatus.OK);
     }
 
 }
