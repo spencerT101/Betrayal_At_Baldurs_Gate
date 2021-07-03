@@ -16,4 +16,10 @@ public class HeroService {
     public List<Hero> getAllHeroes(){
         return heroRepository.findAll();
     }
+
+  public String displayMessage(){
+        return "these are game instructions";
+  }
+
+
 }

@@ -13,19 +13,26 @@ import "../components/css/main.css";
 function GameBox() {
 
     const [heroes, setHeroes] = useState([])
+    const [scroll, setScroll] = useState([])
 
   useEffect(() => {
     fetchHeroesApi()
-    
+    fetchScroll()
   }, [])
 
  
 
- const fetchHeroesApi= function(){
+ const fetchHeroesApi = function(){
    fetch("http://localhost:8080/api/heroes")
   .then(response => response.json())
    .then(heroes => setHeroes(heroes))
    
+ }
+
+ const fetchScroll = function(){
+  fetch("http://localhost:8080/api/scroll")
+ .then(response => response.text())
+  .then(data => setScroll(data))
  }
 
 
@@ -39,7 +46,7 @@ function GameBox() {
             <TileDisplayPic/>
         </div>
        <div id = "middle-layer">
-           <TextBox/>
+           <TextBox scroll = {scroll}/>
            <CharacterCard heroes={heroes}/>
            <GameCard/>
        </div>

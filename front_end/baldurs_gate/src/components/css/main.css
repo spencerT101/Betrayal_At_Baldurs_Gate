@@ -58,8 +58,10 @@
     cursor: pointer;
 }
 
-#text-box{
-  margin-top:200px;
+#game-text{
+  background-color: white;
+  color: black;
+  width: 500px;
 
 }
 

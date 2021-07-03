@@ -22,4 +22,9 @@ public class HeroController {
     public ResponseEntity<List<Hero>> getAllHeroes(){
         return new ResponseEntity<>(heroService.getAllHeroes(), HttpStatus.OK);
     }
+
+    @GetMapping(value = "/scroll")
+    public String scrollMessage(){
+        return heroService.displayMessage();
+    }
 }
