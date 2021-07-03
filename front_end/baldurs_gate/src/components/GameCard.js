@@ -5,8 +5,8 @@ function GameCard() {
 
     return (
         <>
-        <p>I am the game card</p>
-    </>
+            <p>I am the game card</p>
+        </>
 
     )
 

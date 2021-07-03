@@ -15,54 +15,48 @@ function GameBox() {
     const [heroes, setHeroes] = useState([])
     const [scroll, setScroll] = useState([])
 
-  useEffect(() => {
-    fetchHeroesApi()
-    fetchScroll()
-   
-  }, [])
+    useEffect(() => {
+        fetchHeroesApi()
+        fetchScroll()
 
- 
+    }, [])
 
- const fetchHeroesApi = function(){
-   fetch("http://localhost:8080/api/heroes")
-  .then(response => response.json())
-   .then(heroes => setHeroes(heroes))
-   
- }
+    
+    const fetchHeroesApi = function () {
+        fetch("http://localhost:8080/api/heroes")
+            .then(response => response.json())
+            .then(heroes => setHeroes(heroes))
 
- const fetchScroll = function(){
-  fetch("http://localhost:8080/api/scroll")
- .then(response => response.text())
-  .then(data => setScroll(data))
- }
+    }
 
+    const fetchScroll = function () {
+        fetch("http://localhost:8080/api/scroll")
+            .then(response => response.text())
+            .then(data => setScroll(data))
+    }
 
-
-    return(
+    return (
         <>
-        <main>
-     
-        
-        <div id = "tile-display">
-            <TileDisplayPic/>
-        </div>
-       <div id = "middle-layer">
-           <TextBox scroll = {scroll}/>
-           <CharacterCard heroes={heroes}/>
-           <GameCard/>
-       </div>
-        
-        
-        <div id="bottom-layer">
-            <MoveButton className="button"/>
-            <AttackButton className="button"/>
-            <DiceRoll id="dice-rolls"/>
-            <CharacterStats id="char-stats"/>
-        
-        </div>
-        </main>
-           
+            <main>
 
+                <div id="tile-display">
+                    <TileDisplayPic />
+                </div>
+
+                <div id="middle-layer">
+                    <TextBox scroll={scroll} />
+                    <CharacterCard heroes={heroes} />
+                    <GameCard />
+                </div>
+
+                <div id="bottom-layer">
+                    <MoveButton className="button" />
+                    <AttackButton className="button" />
+                    <DiceRoll id="dice-rolls" />
+                    <CharacterStats id="char-stats" />
+                </div>
+
+            </main>
         </>
     )
 

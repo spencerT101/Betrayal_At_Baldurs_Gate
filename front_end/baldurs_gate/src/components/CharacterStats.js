@@ -3,8 +3,8 @@ function CharacterStats() {
 
     return (
         <>
-        <p>I am the character stats</p>
-    </>
+            <p>I am the character stats</p>
+        </>
 
     )
 

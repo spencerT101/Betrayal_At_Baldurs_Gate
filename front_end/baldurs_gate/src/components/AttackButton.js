@@ -5,8 +5,8 @@ function AttackButton() {
 
     return (
         <>
-        <button className="attack-dice-button"> Attack </button>
-    </>
+            <button className="attack-dice-button"> Attack </button>
+        </>
 
     )
 

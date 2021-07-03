@@ -4,20 +4,20 @@ import ListItem from './ListItem';
 
 
 const CharacterCard = ({heroes}) => {
-    
-    const heroItems=heroes.map((hero, index) =>{
-        return <ListItem hero = {hero} key = {index}/>
+
+    const heroItems = heroes.map((hero, index) => {
+        return <ListItem hero={hero} key={index} />
     })
 
 
 
 
-    return(
+    return (
 
         <>
-         <p> {heroItems} </p>
+            <p> {heroItems} </p>
         </>
-        )
+    )
 
 
 

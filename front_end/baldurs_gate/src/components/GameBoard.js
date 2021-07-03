@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react';
 
-function GameBoard(){
+function GameBoard() {
 
-    return(
+    return (
         <>
-        <p>I am the game Board</p>
-
-        <img src={"./images/TextBox.jpeg"}/>
-    </>
+            <p>I am the game Board</p>
+            <img src={"./images/TextBox.jpeg"} />
+        </>
     )
 
 }

@@ -5,8 +5,8 @@ import React, {useState, useEffect} from 'react'
 function TextBox({scroll}) {
 
     return (
-        <> 
-            <div id = "game-text">{scroll}</div>
+        <>
+            <div id="game-text">{scroll}</div>
         </>
     )
 
