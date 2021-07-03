@@ -2,6 +2,7 @@ package com.example.BetrayalAtBaldursGate.controllers;
 
 import com.example.BetrayalAtBaldursGate.repositories.HeroRepository;
 import com.example.BetrayalAtBaldursGate.characters.Hero;
+import com.example.BetrayalAtBaldursGate.services.HeroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,11 +15,11 @@ import java.util.List;
 public class HeroController {
 
     @Autowired
-    HeroRepository heroRepository;
+    HeroService heroService;
 
 
     @GetMapping(value = "/heroes")
     public ResponseEntity<List<Hero>> getAllHeroes(){
-        return new ResponseEntity<>(heroRepository.findAll(), HttpStatus.OK);
+        return new ResponseEntity<>(heroService.getAllHeroes(), HttpStatus.OK);
     }
 }

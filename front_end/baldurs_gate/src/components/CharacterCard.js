@@ -1,16 +1,27 @@
 import React, {useState, useEffect} from 'react';
 
 
-function CharacterCard() {
+function CharacterCard({heroes}) {
+const HeroList = ({heroes}) => {
+
+    const heroItems=heroes.map((hero, index) =>{
+        return <HeroItem hero = {hero} key = {index}/>
+    })
+
+    const HeroDetail = ({selectedHero}) =>{
+
+
 
     return(
 
         <>
-         <p> I am attack CharacterCard </p>
+         <p> {heroItems} </p>
         </>
         )
 
 
+    }
+}
 }
 
 export default CharacterCard;

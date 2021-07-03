@@ -12,6 +12,23 @@ import "../components/css/main.css";
 
 function GameBox() {
 
+    const [heroes, setHeroes] = useState([])
+
+  useEffect(() => {
+    fetchHeroesApi()
+    
+  }, [])
+
+ 
+
+ const fetchHeroesApi= function(){
+   fetch("http://localhost:8080/api/heroes")
+  .then(response => response.json())
+   .then(heroes => setHeroes(heroes))
+   
+ }
+
+
 
     return(
         <>
@@ -23,7 +40,7 @@ function GameBox() {
         </div>
        <div id = "middle-layer">
            <TextBox/>
-           <CharacterCard/>
+           <CharacterCard heroes={heroes}/>
            <GameCard/>
        </div>
         
