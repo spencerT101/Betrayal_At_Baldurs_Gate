@@ -29,7 +29,7 @@ function MoveButton() {
 
     return (
         <>
-            <button onClick={move} className="button">Left</button>
+            {/* <button onClick={move} className="button">Left</button> */}
             <button className="button">Right</button>
             <button className="button">Up</button>
             <button className="button">Down</button>

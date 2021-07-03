@@ -1,0 +1,10 @@
+.game-text{
+    background-image: url('/src/components/images/scroll-portrait.png');
+    color: black;  
+    height: 400px;
+    width: 500;
+}
+  
+#scroll-img {
+      
+}
