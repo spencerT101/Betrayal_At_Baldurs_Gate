@@ -38,7 +38,7 @@ function GameBox() {
 
     return (
         <>
-            <main>
+            <main id="main">
 
                 <div id="tile-display">
                     <TileDisplayPic />

@@ -5,10 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./components/images/test.jpg');
-  background-repeat: no-repeat;
-  color: white;
-
+  background-image: url('./components/images/skull.jpg');
 }
 
 code {
