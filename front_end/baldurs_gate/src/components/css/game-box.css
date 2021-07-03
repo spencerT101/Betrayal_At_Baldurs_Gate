@@ -1,10 +1,12 @@
 .game-text{
     background-image: url('/src/components/images/scroll-portrait.png');
+    background-size: 100%;
     color: black;  
-    height: 400px;
-    width: 500;
-}
-  
-#scroll-img {
-      
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
 }

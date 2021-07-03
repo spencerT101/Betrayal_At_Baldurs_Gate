@@ -18,9 +18,9 @@
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  height:fit-content;
-  padding: 50px;
+  width: auto;
+  height: auto;
+  padding: 20px;
 }
 
 #bottom-layer{
@@ -34,6 +34,7 @@
     /* display: flex;
     flex-wrap: wrap;
     justify-content: center; */
+
     width: 100px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
@@ -44,6 +45,7 @@
     border: white;
     border-radius: 10px;
     cursor: pointer;
+
 }
 
 
