@@ -3,7 +3,9 @@ function TextBox() {
 
     return (
         <>
-        <p>I am the text box</p>
+        <div id = "t-box">
+       <p>I am the text box</p>
+       </div>
     </>
 
     )

@@ -3,7 +3,7 @@ function DiceRoll() {
 
     return (
         <>
-        <p>I am the dice roll</p>
+        <button className="attack-dice-button">Dice Roll</button>
     </>
 
     )

@@ -2,7 +2,61 @@
   width: 100%;
   height: fit-content;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
+}
+
+#tile-display{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#middle-layer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#bottom-layer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+    width: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: #61dafb;
+    margin-left: 10px;
+    margin-right: 20px;   
+    height: 30px;
+    border: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.attack-dice-button {
+    width: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 20px;   
+    height: 30px;
+    border: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#text-box{
+  margin-top:200px;
+
 }
