@@ -18,6 +18,7 @@ function GameBox() {
   useEffect(() => {
     fetchHeroesApi()
     fetchScroll()
+   
   }, [])
 
  

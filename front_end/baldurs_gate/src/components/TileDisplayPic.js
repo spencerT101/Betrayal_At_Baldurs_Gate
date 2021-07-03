@@ -4,8 +4,8 @@ function TileDisplayPic() {
 
     return (
         <>
-        <p>I am the tile display pic</p>
-    </>
+            <p>I am the tile display pic</p>
+        </>
 
     )
 
