@@ -1,9 +1,18 @@
 import { useEffect, useState } from 'react';
 
-function ListItem({hero}){
+
+
+const ListItem = ({hero}) =>{
 
     return (
         <>
+        <li>{hero.name}</li>
+        {/* <li>{hero.might}</li>
+        <li>{hero.sanity}</li>
+        <li>{hero.knowledge}</li>
+        <li>{hero.race}</li>
+        <li>{hero.age}</li> */}
+    
         </>
     )
 }

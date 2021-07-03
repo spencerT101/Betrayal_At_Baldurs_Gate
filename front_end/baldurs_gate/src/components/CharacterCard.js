@@ -1,15 +1,14 @@
 import React, {useState, useEffect} from 'react';
+import ListItem from './ListItem';
 
 
 
-function CharacterCard({heroes}) {
-const HeroList = ({heroes}) => {
-
+const CharacterCard = ({heroes}) => {
+    
     const heroItems=heroes.map((hero, index) =>{
         return <ListItem hero = {hero} key = {index}/>
     })
 
-    const HeroDetail = ({selectedHero}) =>{
 
 
 
@@ -21,8 +20,8 @@ const HeroList = ({heroes}) => {
         )
 
 
-    }
+
 }
-}
+
 
 export default CharacterCard;

@@ -1,10 +1,14 @@
 import React, {useState, useEffect} from 'react'
+import scroll from "./images/scroll_portrait.png"
+
+
 function TextBox() {
 
     return (
         <>
         <div id = "t-box">
-       <p>I am the text box</p>
+       
+       <img id ="scroll-img" src = {scroll} alt="image of scroll"></img>
        </div>
     </>
 
