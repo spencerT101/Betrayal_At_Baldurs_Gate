@@ -34,6 +34,8 @@ public class CardService {
         return allEventsCardsList;
     }
 
+    
+
     public List<Card> generateACard(){
         List omenCard = getAllOmenCards();
         List eventCard = getAllEventCards();
