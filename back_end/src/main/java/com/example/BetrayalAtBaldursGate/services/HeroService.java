@@ -1,10 +1,13 @@
 package com.example.BetrayalAtBaldursGate.services;
 
+import com.example.BetrayalAtBaldursGate.cards.OmenCard;
 import com.example.BetrayalAtBaldursGate.characters.Hero;
 import com.example.BetrayalAtBaldursGate.repositories.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -21,15 +24,14 @@ public class HeroService {
         return "these are game instructions";
   }
 
-  public String moveInADirection(String direction){
-        if(direction == "left"){
+    public String moveInADirection(int direction) {
+        if (direction == 1) {
             return "you have moved left";
-        }else if( direction == "right"){
+        } else if (direction == 2) {
             return "you have moved right";
-        } else if(direction == "up"){
+        } else if (direction == 3) {
             return "you have moved up";
-        } else if(direction == "down")
-        {
+        } else if (direction == 4) {
             return "you have moved down";
         }
             return "wrong move banana!";

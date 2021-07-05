@@ -29,8 +29,8 @@ public class HeroController {
         return heroService.displayMessage();
     }
 
-//    @GetMapping(value = "/move/{direction}")
-//    public String moveHero(@PathVariable String left, @PathVariable String right, @PathVariable String up, @PathVariable String down){
-//        return heroService.moveInADirection(direction);
-//    }
+    @GetMapping(value = "/move/{direction}")
+    public String moveHero(@PathVariable Integer direction){
+        return heroService.moveInADirection(direction);
+    }
 }
