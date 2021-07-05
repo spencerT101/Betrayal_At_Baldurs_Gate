@@ -20,14 +20,11 @@ function MoveButton() {
 
     // }, [])
 
-    // const handleClick = (event) => {
-    //     onMoveButtonClick(event)
-    // }
 
 
     return (
         <>
-            {/* <button onClick={move} className="button">Left</button> */}
+            <button className="button">Left</button> 
             <button className="button" >Right</button>
             <button className="button">Up</button>
             <button className="button">Down</button>

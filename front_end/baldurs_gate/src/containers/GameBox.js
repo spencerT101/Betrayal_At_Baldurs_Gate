@@ -20,10 +20,10 @@ function GameBox() {
     useEffect(() => {
         fetchHeroesApi()
         fetchScroll()
-        omenCardShuffle()
+        fetchShuffledOmenCard()
     }, [])
 
-    const omenCardShuffle = function(event) {
+    const fetchShuffledOmenCard = function() {
         fetch("http://localhost:8080/api/cards")
             .then(response => response.json())
             .then(omenCardShuffle => setOmenCardShuffle(omenCardShuffle))
@@ -60,7 +60,7 @@ function GameBox() {
 
                 <div id="bottom-layer">
                     <MoveButton className="button" />
-                    <AttackButton className="button" onMoveButtonClick = {onMoveButtonClick}/>
+                    <AttackButton className="button"/>
                     <DiceRoll id="dice-rolls" />
                     <CharacterStats id="char-stats" />
                 </div>
