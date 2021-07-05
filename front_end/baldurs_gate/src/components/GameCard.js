@@ -17,6 +17,8 @@ function GameCard({omenCardShuffle}) {
         <div className="card-text">
             <p> {omenCardItems.name} </p>
             <p> {omenCardItems.flavourText} </p>
+            <p> Might: {omenCardItems.might} </p>
+            <p> {omenCardItems.might} </p>
         </div>
         </>
     )

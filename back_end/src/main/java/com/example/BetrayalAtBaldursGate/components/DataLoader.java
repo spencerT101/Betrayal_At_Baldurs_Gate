@@ -4,6 +4,7 @@ import com.example.BetrayalAtBaldursGate.cards.OmenCard;
 import com.example.BetrayalAtBaldursGate.characters.Hero;
 import com.example.BetrayalAtBaldursGate.cards.EventCard;
 
+import com.example.BetrayalAtBaldursGate.characters.Monster;
 import com.example.BetrayalAtBaldursGate.repositories.*;
 import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
 import com.example.BetrayalAtBaldursGate.tiles.Door;
@@ -63,6 +64,9 @@ public class DataLoader implements ApplicationRunner {
 
         Hero torskar = new Hero("Torskar Stonecleaver", 5, 4, 3, 3, "Dwarf", 8, 6, 7, 6, "image", "Barbarian", 130);
         heroRepository.save(torskar);
+
+        Monster intelDevour = new Monster("Intellect Devourers",3,3,0,5,"Intellect Devourer", "url");
+        monsterRepository.save(intelDevour);
 
         BuildingTile felogyrsFireworks = new BuildingTile("Felogyr's Fireworks", Door.RED, Door.FALSE, Door.RED, Door.YELLOW, Icon.EVENT);
         buildingTileRepository.save(felogyrsFireworks);

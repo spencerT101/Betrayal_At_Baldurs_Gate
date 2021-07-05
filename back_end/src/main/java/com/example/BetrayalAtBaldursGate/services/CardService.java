@@ -34,17 +34,25 @@ public class CardService {
         return allEventsCardsList;
     }
 
-    
+    public List<Monster> getMonsters() {
+        List <Monster>allMonsterList = monsterRepository.findAll();
+        Collections.shuffle(allMonsterList, new Random());
+        return allMonsterList;
+    }
 
     public List<Card> generateACard(){
+        List monster = getMonsters();
         List omenCard = getAllOmenCards();
         List eventCard = getAllEventCards();
         double number = Math.random();
-        if(number <= 0.5) {
+        if(number <= 0.3) {
             return omenCard;
         }
-        if(number > 0.5) {
+        if(number > 0.3 && number < 0.6) {
             return eventCard;
+        }
+        if(number > 0.6) {
+            return monster;
         }
         return null;
     }
