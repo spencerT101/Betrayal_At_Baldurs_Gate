@@ -23,24 +23,24 @@ public abstract class GameState {
     MonsterRepository monsterRepository = new MonsterRepository;
     OmenCardRepository omenCardRepository = new OmenCardRepository;
     StreetTileRepository streetTileRepository = new StreetTileRepository;
-    BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.RED, Icon.FALSE);
-    BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.RED, Door.RED, Door.RED, Door.RED, Icon.FALSE);
-    BuildingTile kitchen = new BuildingTile("Kitchen", Door.RED, Door.RED, Door.RED, Door.YELLOW, Icon.FALSE);
+    BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.MARKETPLACE, Door.GRAY_HARBOUR, Door.HAUNTED_ALLEY, Door.INNER_CHAMBER, Icon.FALSE);
+    BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.STOREHOUSE, Door.ELFSONG_TAVERN, Door.SPYS_ROOST, Door.KITCHEN, Icon.FALSE);
+    BuildingTile kitchen = new BuildingTile("Kitchen", Door.SMITHY, Door.INNER_CHAMBER, Door.FELOGYRS_FIREWORKS, Door.FOUNTAIN, Icon.FALSE);
 
 
     private int roundCounter;
-    private ArrayList<Hero> players;
+    private Hero hero;
     private ArrayList<Monster> monsters;
     private ArrayList<BuildingTile> buildingTiles;
-    private ArrayList<StreetTile>streetTiles;
+    private ArrayList<StreetTile> streetTiles;
     private ArrayList<OmenCard> omenCards;
-    private ArrayList<EventCard>eventCards;
+    private ArrayList<EventCard> eventCards;
     private ArrayList<Tile> board;
 
 
     public GameState() {
         this.roundCounter = 0;
-        this.players = new ArrayList<>();
+        this.hero = null;
         this.monsters = new ArrayList<>();
         this.buildingTiles = new ArrayList<>();
         this.streetTiles = new ArrayList<>();
@@ -57,12 +57,12 @@ public abstract class GameState {
         this.roundCounter = roundCounter;
     }
 
-    public ArrayList<Hero> getPlayers() {
-        return players;
+    public Hero getHero() {
+        return hero;
     }
 
-    public void setPlayers(ArrayList<Hero> players) {
-        this.players = players;
+    public void setPlayers(Hero hero) {
+        this.hero = hero;
     }
 
     public ArrayList<Monster> getMonsters() {
@@ -105,11 +105,7 @@ public abstract class GameState {
         this.eventCards = eventCards;
     }
 
-    public void addPlayerToList(Hero hero){
-        this.players.add(hero);
-    }
-
-    public void addBuildingTileToList(BuildingTile buildingTile){
+    public void addBuildingTileToList(BuildingTile buildingTile) {
         this.buildingTiles.add(buildingTile);
     }
 
@@ -121,7 +117,7 @@ public abstract class GameState {
         this.omenCards.add(omenCard);
     }
 
-    public void addEventCardToList(EventCard eventCard){
+    public void addEventCardToList(EventCard eventCard) {
         this.eventCards.add(eventCard);
     }
 
@@ -133,20 +129,19 @@ public abstract class GameState {
         this.board = board;
     }
 
-    public void populateGame(){
-
-        heroRepository.findAllHeroes().forEach(player -> players.add(player));
+    public void populateGame() {
+        hero = heroRepository.findAllHeroes().get(0);
         monsterRepository.findAllMonsters().forEach(monster -> monsters.add(monster));
         buildingTileRepository.findAllBuildingTiles().forEach(buildingTile -> buildingTiles.add(buildingTile));
         streetTileRepository.findAllStreetTiles().forEach(streetTile -> streetTiles.add(streetTile));
         omenCardRepository.findAllOmenCards().forEach(omenCard -> omenCards.add(omenCard));
         eventCardRepository.findAllEventCards().forEach(eventCard -> eventCards.add(eventCard));
-        this.board.add(elfsongTavern);
-        elfsongTavern.setWest(innerChamber);
-        this.board.add(innerChamber);
-        innerChamber.setEast(elfsongTavern);
-        innerChamber.setWest(kitchen);
-        this.board.add(kitchen);
-        kitchen.setEast(innerChamber);
+        buildingTiles.forEach(buildingTile -> {
+            if (buildingTile.getName() == "Elfsong Tavern") {
+                buildingTile.addHero(hero);
+            }
+        });
     }
+
+
 }

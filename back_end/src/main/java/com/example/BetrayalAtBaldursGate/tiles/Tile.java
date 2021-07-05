@@ -34,21 +34,12 @@ public abstract class Tile {
 
     private ArrayList<Monster> monsters;
 
-    private Tile north;
-    private Tile east;
-    private Tile south;
-    private Tile west;
-
     public Tile(String name,Door northDoor, Door eastDoor, Door southDoor, Door westDoor, Icon icon) {
         this.name = name;
         this.northDoor = northDoor;
         this.eastDoor = eastDoor;
         this.southDoor = southDoor;
         this.westDoor = westDoor;
-        this.north = null;
-        this.east = null;
-        this.south = null;
-        this.west = null;
         this.icon = icon;
         this.heroes = new ArrayList<>();
         this.monsters = new ArrayList<>();
@@ -122,6 +113,10 @@ public abstract class Tile {
         this.heroes = heroes;
     }
 
+    public void addHero(Hero hero) {
+        this.heroes.add(hero);
+    }
+
     public ArrayList<Monster> getMonsters() {
         return monsters;
     }
@@ -130,35 +125,8 @@ public abstract class Tile {
         this.monsters = monsters;
     }
 
-    public Tile getNorth() {
-        return north;
+    public void addMonster(Monster monster) {
+        this.monsters.add(monster);
     }
 
-    public void setNorth(Tile north) {
-        this.north = north;
-    }
-
-    public Tile getEast() {
-        return east;
-    }
-
-    public void setEast(Tile east) {
-        this.east = east;
-    }
-
-    public Tile getSouth() {
-        return south;
-    }
-
-    public void setSouth(Tile south) {
-        this.south = south;
-    }
-
-    public Tile getWest() {
-        return west;
-    }
-
-    public void setWest(Tile west) {
-        this.west = west;
-    }
 }
