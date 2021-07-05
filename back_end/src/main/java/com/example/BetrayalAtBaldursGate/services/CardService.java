@@ -4,7 +4,9 @@ import com.example.BetrayalAtBaldursGate.cards.Card;
 import com.example.BetrayalAtBaldursGate.cards.EventCard;
 import com.example.BetrayalAtBaldursGate.cards.OmenCard;
 
+import com.example.BetrayalAtBaldursGate.characters.Monster;
 import com.example.BetrayalAtBaldursGate.repositories.EventCardRepository;
+import com.example.BetrayalAtBaldursGate.repositories.MonsterRepository;
 import com.example.BetrayalAtBaldursGate.repositories.OmenCardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +21,9 @@ public class CardService {
 
     @Autowired
     EventCardRepository eventCardRepository;
+
+    @Autowired
+    MonsterRepository monsterRepository;
 
 
 
