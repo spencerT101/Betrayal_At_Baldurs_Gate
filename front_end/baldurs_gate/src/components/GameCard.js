@@ -7,6 +7,9 @@ function GameCard({omenCardShuffle}) {
     if(omenCardShuffle.length == 0){
         return "loading";
     }
+    
+    if (omenCardShuffle.might !=undefined)
+        return 
   
     const omenCardItems = omenCardShuffle[0]
     
@@ -14,11 +17,10 @@ function GameCard({omenCardShuffle}) {
     return (
 
         <>
-        <div className="card-text">
-            <p> {omenCardItems.name} </p>
-            <p> {omenCardItems.flavourText} </p>
-            <p> Might: {omenCardItems.might} </p>
-            <p> {omenCardItems.might} </p>
+        <div className="text-box">
+            <p className="text"> {omenCardItems.name} </p>
+            <p className="text"> {omenCardItems.flavourText} </p>
+            <p className="text"> {omenCardItems.might} </p>
         </div>
         </>
     )

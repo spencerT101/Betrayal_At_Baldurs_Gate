@@ -1,14 +1,23 @@
-.text-box{
+.text-box {
     background-image: url('/src/components/images/scroll-portrait.png');
     background-size: 100%;
     color: black;  
     height: 500px;
-    min-height: fit-content;
     width: 500px;
-    min-width: fit-content;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center; 
+}
+
+.text {
+    background-size: 100%;
+    color: black; 
+    width: 300px; 
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
     align-items: center;
-    
+    margin: 0px; 
+    padding: 0px;
 }
