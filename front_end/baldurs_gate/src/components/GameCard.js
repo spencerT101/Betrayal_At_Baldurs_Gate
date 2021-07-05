@@ -7,12 +7,10 @@ function GameCard({omenCardShuffle}) {
     if(omenCardShuffle.length == 0){
         return "loading";
     }
-    console.log(omenCardShuffle)
+  
     const omenCardItems = omenCardShuffle[0]
     
-    // ((omenCard, index) => {
-    //     return <CardListItem omenCard={omenCard} key={index} />
-    // })
+
 
 
     return (
