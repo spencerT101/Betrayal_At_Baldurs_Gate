@@ -1,5 +1,6 @@
 package com.example.BetrayalAtBaldursGate.controllers;
 
+import com.example.BetrayalAtBaldursGate.cards.Card;
 import com.example.BetrayalAtBaldursGate.cards.OmenCard;
 import com.example.BetrayalAtBaldursGate.repositories.OmenCardRepository;
 import com.example.BetrayalAtBaldursGate.services.CardService;
@@ -23,8 +24,8 @@ public class OmenCardController {
     CardService cardService;
 
 
-    @GetMapping(value = "/omen_cards")
-    public ResponseEntity<List<OmenCard>> getAllOmenCards(){
-        return new ResponseEntity<>(cardService.getAllOmenCards(), HttpStatus.OK);
+    @GetMapping(value = "/cards")
+    public ResponseEntity<List<Card>> getAllCards(){
+        return new ResponseEntity<>(cardService.generateACard(), HttpStatus.OK);
     }
 }

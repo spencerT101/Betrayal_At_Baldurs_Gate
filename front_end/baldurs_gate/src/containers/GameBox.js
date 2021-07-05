@@ -24,9 +24,8 @@ function GameBox() {
     }, [])
 
     const fetchShuffledOmenCard = function() {
-        fetch("http://localhost:8080/api/omen_cards")
+        fetch("http://localhost:8080/api/cards")
             .then(response => response.json())
-            // .then(data => console.log(data))
             .then(omenCardShuffle => setOmenCardShuffle(omenCardShuffle))
     }
 
