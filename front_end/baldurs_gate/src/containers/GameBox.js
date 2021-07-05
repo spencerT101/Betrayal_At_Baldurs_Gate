@@ -15,12 +15,20 @@ function GameBox() {
 
     const [heroes, setHeroes] = useState([])
     const [scroll, setScroll] = useState([])
+    const [omenCardShuffle, setOmenCardShuffle] = useState([])
 
     useEffect(() => {
         fetchHeroesApi()
         fetchScroll()
-
+        fetchShuffledOmenCard()
     }, [])
+
+    const fetchShuffledOmenCard = function() {
+        fetch("http://localhost:8080/api/omen_cards")
+            .then(response => response.json())
+            // .then(data => console.log(data))
+            .then(omenCardShuffle => setOmenCardShuffle(omenCardShuffle))
+    }
 
     
     const fetchHeroesApi = function () {
@@ -47,7 +55,7 @@ function GameBox() {
                 <div id="middle-layer">
                     <TextBox scroll={scroll} />
                     <CharacterCard heroes={heroes} />
-                    <GameCard />
+                    <GameCard omenCardShuffle = {omenCardShuffle}/>
                 </div>
 
                 <div id="bottom-layer">

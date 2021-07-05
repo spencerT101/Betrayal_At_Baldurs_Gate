@@ -10,8 +10,6 @@ const CharacterCard = ({heroes}) => {
     })
 
 
-
-
     return (
 
         <>

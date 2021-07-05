@@ -61,4 +61,6 @@ public abstract class Card {
     public void setFunctionText(String functionText) {
         this.functionText = functionText;
     }
+
+
 }
