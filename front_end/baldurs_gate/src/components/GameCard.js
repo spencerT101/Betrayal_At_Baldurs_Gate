@@ -11,13 +11,13 @@ function GameCard({omenCardShuffle}) {
     const omenCardItems = omenCardShuffle[0]
     
 
-
-
     return (
 
         <>
+        <div className="card-text">
             <p> {omenCardItems.name} </p>
             <p> {omenCardItems.flavourText} </p>
+        </div>
         </>
     )
 

@@ -21,9 +21,6 @@ function MoveButton() {
     }, [])
 
     const handleClick = (event) => {
-
-
-
     }
 
 

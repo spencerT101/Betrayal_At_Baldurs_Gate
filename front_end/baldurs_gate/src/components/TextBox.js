@@ -6,10 +6,9 @@ function TextBox({scroll}) {
 
     return (
         <>
-            <div className="game-text">{scroll}</div>
+            <div className="text-box">{scroll}</div>
         </>
     )
-
 
 }
 

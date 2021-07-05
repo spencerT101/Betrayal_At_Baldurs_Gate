@@ -8,7 +8,7 @@ import CharacterStats from '../components/CharacterStats';
 import TileDisplayPic from "../components/TileDisplayPic";
 import GameCard from "../components/GameCard";
 import "../components/css/main.css";
-import "../components/css/game-box.css";
+import "../components/css/text-box.css";
 
 
 function GameBox() {
