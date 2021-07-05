@@ -1,11 +1,6 @@
-#main-box {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-  align-items: center;
-}
+/* #main {
+
+} */
 
 #tile-display{
   display:flex;
@@ -45,6 +40,8 @@
     border: white;
     border-radius: 10px;
     cursor: pointer;
+    border-bottom: 3px solid #777;
+    border-radius: 6px;
 
 }
 
@@ -61,5 +58,7 @@
     border: white;
     border-radius: 10px;
     cursor: pointer;
+    border-bottom: 3px solid #777;
+    border-radius: 6px;
 }
 
