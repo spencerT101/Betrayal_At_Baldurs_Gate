@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap');
+/* 'Almarai', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=Press+Start+2P&display=swap');
+/* 'Press Start 2P', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=Press+Start+2P&family=Tangerine:wght@700&display=swap');
+/* 'Tangerine', cursive; */
+
+
 .text-box {
     background-image: url('/src/components/images/scroll-portrait.png');
     background-size: 100%;
@@ -20,4 +28,6 @@
     align-items: center;
     margin: 0px; 
     padding: 0px;
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
 }
