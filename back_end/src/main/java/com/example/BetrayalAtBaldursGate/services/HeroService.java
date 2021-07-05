@@ -16,13 +16,13 @@ public class HeroService {
     @Autowired
     HeroRepository heroRepository;
 
-    public List<Hero> getAllHeroes(){
+    public List<Hero> getAllHeroes() {
         return heroRepository.findAll();
     }
 
-  public String displayMessage(){
+    public String displayMessage() {
         return "these are game instructions";
-  }
+    }
 
     public String moveInADirection(int direction) {
         if (direction == 1) {
@@ -34,9 +34,10 @@ public class HeroService {
         } else if (direction == 4) {
             return "you have moved down";
         }
-            return "wrong move banana!";
-      }
-  }
+        return "wrong move banana!";
+    }
+
+}
 
 
 
