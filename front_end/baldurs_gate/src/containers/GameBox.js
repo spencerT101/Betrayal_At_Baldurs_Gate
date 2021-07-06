@@ -55,11 +55,11 @@ function GameBox() {
                 <div id="middle-layer">
                     <TextBox scroll={scroll} />
                     <CharacterCard heroes={heroes} />
-                    <GameCard omenCardShuffle = {omenCardShuffle}/>
+                    <GameCard omenCardShuffle = {omenCardShuffle} />
                 </div>
 
                 <div id="bottom-layer">
-                    <MoveButton className="button" />
+                    <MoveButton className="button" fetchShuffledOmenCard={fetchShuffledOmenCard}  />
                     <AttackButton className="button"/>
                     <DiceRoll id="dice-rolls" />
                     <CharacterStats id="char-stats" />
