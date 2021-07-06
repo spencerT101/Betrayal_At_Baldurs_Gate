@@ -35,7 +35,6 @@ public abstract class Character {
     @Column(name = "image")
     private String image;
 
-    private Tile tile;
 
 
     public Character(String name, int might, int speed, int sanity, int knowledge, String race, String image) {
@@ -46,7 +45,6 @@ public abstract class Character {
         this.knowledge = knowledge;
         this.race = race;
         this.image = image;
-        this.tile = null;
     }
 
     public Character() {
@@ -116,38 +114,5 @@ public abstract class Character {
         this.image = image;
     }
 
-    public Tile getTile() {
-        return tile;
-    }
-
-    public void setTile(Tile tile) {
-        this.tile = tile;
-    }
-
-    public Tile move(GameState game, Integer direction) {
-        String intendedTile = null;
-        if (direction == 1){
-            intendedTile = this.tile.getWestDoor().name();
-        } else if(direction == 2){
-            intendedTile = this.tile.getEastDoor().name();
-        } else if (direction == 3){
-            intendedTile = this.tile.getNorthDoor().name();
-        } else if (direction == 4){
-            intendedTile = this.tile.getSouthDoor().name();
-        };
-
-        String finalIntendedTile = intendedTile;
-        game.getBuildingTiles().forEach(buildingTile -> {
-            if (buildingTile.getName().equals(finalIntendedTile)){
-                this.setTile(buildingTile);
-            }
-        });
-        game.getStreetTiles().forEach(streetTile -> {
-            if (streetTile.getName().equals(finalIntendedTile)){
-                this.setTile(streetTile);
-            }
-        });
-        return this.getTile();
-    }
 }
 

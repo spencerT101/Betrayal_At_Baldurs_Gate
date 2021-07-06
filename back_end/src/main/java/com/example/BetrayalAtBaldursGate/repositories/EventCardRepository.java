@@ -9,5 +9,4 @@ import java.util.List;
 
 @Repository
 public interface EventCardRepository extends JpaRepository<EventCard, Long> {
-    List<EventCard> findAllEventCards();
 }

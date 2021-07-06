@@ -9,5 +9,4 @@ import java.util.List;
 
 @Repository
 public interface StreetTileRepository extends JpaRepository<StreetTile, Long> {
-    List<StreetTile> findAllStreetTiles();
 }

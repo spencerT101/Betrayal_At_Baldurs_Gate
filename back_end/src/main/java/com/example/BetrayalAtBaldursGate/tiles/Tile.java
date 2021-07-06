@@ -4,6 +4,7 @@ import com.example.BetrayalAtBaldursGate.characters.Monster;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @MappedSuperclass
 public abstract class Tile {

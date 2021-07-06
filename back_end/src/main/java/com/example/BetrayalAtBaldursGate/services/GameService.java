@@ -1,9 +1,8 @@
 package com.example.BetrayalAtBaldursGate.services;
 
-import com.example.BetrayalAtBaldursGate.characters.Hero;
-import com.example.BetrayalAtBaldursGate.games.GameState;
 import com.example.BetrayalAtBaldursGate.games.StandardGame;
 import com.example.BetrayalAtBaldursGate.repositories.*;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,17 +28,18 @@ public class GameService {
     @Autowired
     MonsterRepository monsterRepository;
 
-    @Autowired
-    StandardGame game;
+//    StandardGame game;
+//
+//    public void startGame(StandardGame game){
+//        this.game = game;
+//        game.populateGame();
+//    }
 
 
 
-    public String helloSpencer(String name) {
-        return "Testy " + name;
-    }
 
-
-    public Boolean moveHero(Integer direction) {
+    public String moveHero(Integer direction, StandardGame game) {
+        String currentTile = game.getHero().getTile().getName();
         if(direction != null){
             game.getHero().move(game, direction);
             game.getBuildingTiles().forEach(buildingTile -> {if (buildingTile == game.getHero().getTile()){
@@ -48,10 +48,13 @@ public class GameService {
             game.getStreetTiles().forEach(streetTile -> {if (streetTile == game.getHero().getTile()){
                 streetTile.addHero(game.getHero());
             }});
-            return true;
+            if(currentTile == game.getHero().getTile().getName()){
+                return "You cannot move in that direction from " + currentTile;
+            }
+            return "You moved from " + currentTile + " to " + game.getHero().getTile().getName();
 
         } else {
-            return false;
+            return "You didn't submit a direction to move";
         }
     }
 }

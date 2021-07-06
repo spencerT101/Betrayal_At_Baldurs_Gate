@@ -9,5 +9,4 @@ import java.util.List;
 
 @Repository
 public interface ItemCardRepository extends JpaRepository<ItemCard, Long> {
-    List<ItemCard> findAllItemCards();
 }

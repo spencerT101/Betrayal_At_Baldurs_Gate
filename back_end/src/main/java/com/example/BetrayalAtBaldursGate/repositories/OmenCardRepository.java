@@ -9,5 +9,4 @@ import java.util.List;
 
 @Repository
 public interface OmenCardRepository extends JpaRepository<OmenCard, Long> {
-    List<OmenCard> findAllOmenCards();
 }

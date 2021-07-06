@@ -8,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface BuildingTileRepository extends JpaRepository<BuildingTile, Long> {
-    List<BuildingTile> findAllBuildingTiles();
 
 }

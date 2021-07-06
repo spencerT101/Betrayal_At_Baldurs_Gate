@@ -16,13 +16,31 @@ import java.util.ArrayList;
 
 public abstract class GameState {
 
-    HeroRepository heroRepository = new HeroRepository;
-    BuildingTileRepository buildingTileRepository = new BuildingTileRepository;
-    EventCardRepository eventCardRepository = new EventCardRepository;
-    ItemCardRepository itemCardRepository = new ItemCardRepository;
-    MonsterRepository monsterRepository = new MonsterRepository;
-    OmenCardRepository omenCardRepository = new OmenCardRepository;
-    StreetTileRepository streetTileRepository = new StreetTileRepository;
+    @Autowired
+    BuildingTileRepository buildingTileRepository;
+
+    @Autowired
+    StreetTileRepository streetTileRepository;
+
+    @Autowired
+    OmenCardRepository omenCardRepository;
+
+    @Autowired
+    EventCardRepository eventCardRepository;
+
+    @Autowired
+    HeroRepository heroRepository;
+
+    @Autowired
+    MonsterRepository monsterRepository;
+
+//    HeroRepository heroRepository = new HeroRepository;
+//    BuildingTileRepository buildingTileRepository = new BuildingTileRepository;
+//    EventCardRepository eventCardRepository = new EventCardRepository;
+//    ItemCardRepository itemCardRepository = new ItemCardRepository;
+//    MonsterRepository monsterRepository = new MonsterRepository;
+//    OmenCardRepository omenCardRepository = new OmenCardRepository;
+//    StreetTileRepository streetTileRepository = new StreetTileRepository;
     BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.MARKETPLACE, Door.GRAY_HARBOUR, Door.HAUNTED_ALLEY, Door.INNER_CHAMBER, Icon.FALSE);
     BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.STOREHOUSE, Door.ELFSONG_TAVERN, Door.SPYS_ROOST, Door.KITCHEN, Icon.FALSE);
     BuildingTile kitchen = new BuildingTile("Kitchen", Door.SMITHY, Door.INNER_CHAMBER, Door.FELOGYRS_FIREWORKS, Door.FOUNTAIN, Icon.FALSE);
@@ -130,17 +148,18 @@ public abstract class GameState {
     }
 
     public void populateGame() {
-        hero = heroRepository.findAllHeroes().get(0);
-        monsterRepository.findAllMonsters().forEach(monster -> monsters.add(monster));
-        buildingTileRepository.findAllBuildingTiles().forEach(buildingTile -> buildingTiles.add(buildingTile));
-        streetTileRepository.findAllStreetTiles().forEach(streetTile -> streetTiles.add(streetTile));
-        omenCardRepository.findAllOmenCards().forEach(omenCard -> omenCards.add(omenCard));
-        eventCardRepository.findAllEventCards().forEach(eventCard -> eventCards.add(eventCard));
-        buildingTiles.forEach(buildingTile -> {
-            if (buildingTile.getName() == "Elfsong Tavern") {
-                buildingTile.addHero(hero);
-            }
-        });
+        heroRepository.findAll();
+//        .get(0);
+//        monsterRepository.findAll().forEach(monster -> monsters.add(monster));
+//        buildingTileRepository.findAll().forEach(buildingTile -> buildingTiles.add(buildingTile));
+//        streetTileRepository.findAll().forEach(streetTile -> streetTiles.add(streetTile));
+//        omenCardRepository.findAll().forEach(omenCard -> omenCards.add(omenCard));
+//        eventCardRepository.findAll().forEach(eventCard -> eventCards.add(eventCard));
+//        buildingTiles.forEach(buildingTile -> {
+//            if (buildingTile.getName() == "Elfsong Tavern") {
+//                buildingTile.addHero(hero);
+//            }
+//        });
     }
 
 
