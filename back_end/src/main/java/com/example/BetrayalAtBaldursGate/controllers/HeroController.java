@@ -4,11 +4,12 @@ import com.example.BetrayalAtBaldursGate.games.StandardGame;
 import com.example.BetrayalAtBaldursGate.repositories.*;
 import com.example.BetrayalAtBaldursGate.characters.Hero;
 import com.example.BetrayalAtBaldursGate.services.GameService;
-import com.example.BetrayalAtBaldursGate.tiles.StreetTile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.persistence.Transient;
 import java.util.List;
 
 @RestController
@@ -35,21 +36,44 @@ public class HeroController {
     @Autowired
     GameService gameService;
 
+    @Transient
+    StandardGame game = new StandardGame();
+
 
     @GetMapping(value = "/heroes")
-    public ResponseEntity<List<Hero>> getAllHeroes(){
+    public ResponseEntity<List<Hero>> getAllHeroes() {
         return new ResponseEntity<>(heroRepository.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/move/{direction}")
-    public ResponseEntity<String> moveHeroes(@PathVariable Integer direction){
+    @GetMapping(value = "/start/move/{direction}")
+    public ResponseEntity<String> moveHeroes(@PathVariable Integer direction) {
 
-        return new ResponseEntity<>(gameService.moveHero(direction, game), HttpStatus.OK);
+        String currentTile = game.getHero().getTile().getName();
+        if (direction != null) {
+            game.getHero().move(game, direction);
+            game.getBuildingTiles().forEach(buildingTile -> {
+                if (buildingTile == game.getHero().getTile()) {
+                    buildingTile.addHero(game.getHero());
+                }
+            });
+            game.getStreetTiles().forEach(streetTile -> {
+                if (streetTile == game.getHero().getTile()) {
+                    streetTile.addHero(game.getHero());
+                }
+            });
+            if (currentTile.equals(game.getHero().getTile().getName())) {
+                return new ResponseEntity<>("You cannot move in that direction from" + currentTile, HttpStatus.OK);
+            }
+            return new ResponseEntity<>("You moved from " + currentTile + " to " + game.getHero().getTile().getName()
+                    , HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("You didn't submit a direction to move", HttpStatus.OK);
+        }
+
     }
 
     @GetMapping(value = "/start")
-    public ResponseEntity<String> startGame(){
-        StandardGame game = new StandardGame();
+    public ResponseEntity<String> startGame() {
         Hero hero = heroRepository.findAll().get(0);
         monsterRepository.findAll().forEach(monster -> game.getMonsters().add(monster));
         buildingTileRepository.findAll().forEach(buildingTile -> game.getBuildingTiles().add(buildingTile));
@@ -57,7 +81,7 @@ public class HeroController {
         omenCardRepository.findAll().forEach(omenCard -> game.getOmenCards().add(omenCard));
         eventCardRepository.findAll().forEach(eventCard -> game.getEventCards().add(eventCard));
         game.getBuildingTiles().forEach(buildingTile -> {
-            if (buildingTile.getName() == "Elfsong Tavern") {
+            if (buildingTile.getName().equals("Elfsong Tavern")) {
                 buildingTile.addHero(hero);
             }
         });
