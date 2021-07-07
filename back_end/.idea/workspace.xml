@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2ee6ffb-4026-4901-95f9-a61021cb59b7" name="Default Changelist" comment="move working in front end and all bugs checked">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/babg_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/babg_db.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/baldurs_gate/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/baldurs_gate/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/characters/Character.java" afterDir="false" />
     </list>
     <list id="c361d398-368d-4f7b-9b54-585879ebdd17" name="Changes by user" comment="" />
     <option name="SHOW_DIALOG" value="false" />
