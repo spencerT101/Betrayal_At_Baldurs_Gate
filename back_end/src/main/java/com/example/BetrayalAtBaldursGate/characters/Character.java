@@ -1,4 +1,8 @@
 package com.example.BetrayalAtBaldursGate.characters;
+import com.example.BetrayalAtBaldursGate.games.GameState;
+import com.example.BetrayalAtBaldursGate.tiles.BuildingTile;
+import com.example.BetrayalAtBaldursGate.tiles.Tile;
+
 import javax.persistence.*;
 
 
@@ -30,6 +34,7 @@ public abstract class Character {
 
     @Column(name = "image")
     private String image;
+
 
 
     public Character(String name, int might, int speed, int sanity, int knowledge, String race, String image) {
@@ -108,4 +113,6 @@ public abstract class Character {
     public void setImage(String image) {
         this.image = image;
     }
+
 }
+

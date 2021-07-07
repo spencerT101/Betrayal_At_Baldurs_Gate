@@ -47,7 +47,7 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        Hero azadeh = new Hero("Azadeh Rashka", 3, 4, 5, 3, "Human", 7, 8, 8, 5, "images/Character Classes/Azadeh Rashka.png", "Monk", 42);
+        Hero azadeh = new Hero("Azadeh Rashka", 3, 4, 5, 3, "Human", 7, 8, 8, 5, "image", "Monk", 42);
         heroRepository.save(azadeh);
 
         Hero dhadius = new Hero("Dhadius The Scarlet", 2, 4, 4, 5, "Human", 6, 8, 8, 7, "image", "Wizard", 55);
@@ -65,88 +65,95 @@ public class DataLoader implements ApplicationRunner {
         Hero torskar = new Hero("Torskar Stonecleaver", 5, 4, 3, 3, "Dwarf", 8, 6, 7, 6, "image", "Barbarian", 130);
         heroRepository.save(torskar);
 
+        BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.MARKETPLACE, Door.GRAY_HARBOUR, Door.HAUNTED_ALLEY, Door.INNER_CHAMBER, Icon.FALSE);
+        buildingTileRepository.save(elfsongTavern);
+
+        BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.STOREHOUSE, Door.ELFSONG_TAVERN, Door.SPYS_ROOST, Door.KITCHEN, Icon.FALSE);
+        buildingTileRepository.save(innerChamber);
+
+        BuildingTile kitchen = new BuildingTile("Kitchen", Door.SMITHY, Door.INNER_CHAMBER, Door.FELOGYRS_FIREWORKS, Door.FOUNTAIN, Icon.FALSE);
+        buildingTileRepository.save(kitchen);
+
+        BuildingTile felogyrsFireworks = new BuildingTile("Felogyr's Fireworks", Door.KITCHEN, Door.FALSE, Door.SORCEROUS_SUNDRIES, Door.EXECUTIONERS_BLOCK, Icon.EVENT);
         Monster intelDevour = new Monster("Intellect Devourers",3,3,0,5,"Intellect Devourer", "url");
         monsterRepository.save(intelDevour);
 
-        BuildingTile felogyrsFireworks = new BuildingTile("Felogyr's Fireworks", Door.RED, Door.FALSE, Door.RED, Door.YELLOW, Icon.EVENT);
-        buildingTileRepository.save(felogyrsFireworks);
-
-        BuildingTile hallOfWonders = new BuildingTile("Hall of Wonders", Door.FALSE, Door.FALSE, Door.YELLOW, Door.RED, Icon.EVENT);
+        BuildingTile hallOfWonders = new BuildingTile("Hall of Wonders", Door.FALSE, Door.FALSE, Door.HOUSE_OF_BLOOD, Door.WEAPON_SHOP, Icon.EVENT);
         buildingTileRepository.save(hallOfWonders);
 
-        BuildingTile houseOfBlood = new BuildingTile("House of Blood", Door.RED, Door.RED, Door.RED, Door.RED, Icon.OMEN);
+        BuildingTile houseOfBlood = new BuildingTile("House of Blood", Door.HALL_OF_WONDERS, Door.MANSION, Door.FALSE, Door.FALSE, Icon.OMEN);
         buildingTileRepository.save(houseOfBlood);
 
-        BuildingTile mansion = new BuildingTile("Mansion", Door.RED, Door.RED, Door.YELLOW, Door.FALSE, Icon.EVENT);
+        BuildingTile mansion = new BuildingTile("Mansion", Door.FALSE, Door.FOUNTAIN, Door.FALSE, Door.HOUSE_OF_BLOOD, Icon.EVENT);
         buildingTileRepository.save(mansion);
 
-        BuildingTile shrineToGargauth = new BuildingTile("Shrine To Gargauth", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.RED, Icon.OMEN);
+        BuildingTile shrineToGargauth = new BuildingTile("Shrine To Gargauth", Door.FALSE, Door.BELOVED_RANGER_STATUE, Door.MARKETPLACE, Door.TRASH_PILE, Icon.OMEN);
         buildingTileRepository.save(shrineToGargauth);
 
-        BuildingTile smithy = new BuildingTile("Smithy", Door.YELLOW, Door.FALSE, Door.RED, Door.FALSE, Icon.EVENT);
+        BuildingTile smithy = new BuildingTile("Smithy", Door.FALSE, Door.STOREHOUSE, Door.KITCHEN, Door.MURDER_ROW, Icon.EVENT);
         buildingTileRepository.save(smithy);
 
-        BuildingTile sorcerousSundries = new BuildingTile("Sorcerous Sundries", Door.FALSE, Door.FALSE, Door.YELLOW, Door.RED, Icon.EVENT);
+        BuildingTile sorcerousSundries = new BuildingTile("Sorcerous Sundries", Door.FELOGYRS_FIREWORKS, Door.TEMPLE_OF_UMBERLEE, Door.FALSE, Door.FALSE, Icon.EVENT);
         buildingTileRepository.save(sorcerousSundries);
 
-        BuildingTile spysRoost = new BuildingTile("Spy's Roost", Door.RED, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
+        BuildingTile spysRoost = new BuildingTile("Spy's Roost", Door.INNER_CHAMBER, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
         buildingTileRepository.save(spysRoost);
 
-        BuildingTile storehouse = new BuildingTile("Storehouse", Door.RED, Door.RED, Door.RED, Door.RED, Icon.ITEM);
+        BuildingTile storehouse = new BuildingTile("Storehouse", Door.TRASH_PILE, Door.MARKETPLACE, Door.INNER_CHAMBER, Door.SMITHY, Icon.ITEM);
         buildingTileRepository.save(storehouse);
 
-        BuildingTile templeOfUmberlee = new BuildingTile("Temple of Umberlee", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE, Icon.ITEM);
+        BuildingTile templeOfUmberlee = new BuildingTile("Temple of Umberlee", Door.FALSE, Door.ROSE_PORTAL, Door.FALSE, Door.SORCEROUS_SUNDRIES, Icon.ITEM);
         buildingTileRepository.save(templeOfUmberlee);
 
-        BuildingTile tradingPost = new BuildingTile("Trading Post", Door.FALSE, Door.FALSE, Door.YELLOW, Door.FALSE, Icon.EVENT);
+        BuildingTile tradingPost = new BuildingTile("Trading Post", Door.FALSE, Door.EXECUTIONERS_BLOCK, Door.FALSE, Door.FALSE, Icon.EVENT);
         buildingTileRepository.save(tradingPost);
 
-        BuildingTile warehouse = new BuildingTile("Warehouse", Door.RED, Door.YELLOW, Door.RED, Door.RED, Icon.ITEM);
+        BuildingTile warehouse = new BuildingTile("Warehouse", Door.FALSE, Door.FALSE, Door.FALSE, Door.FALSE, Icon.ITEM);
         buildingTileRepository.save(warehouse);
 
-        BuildingTile weaponShop = new BuildingTile("Weapon Shop", Door.YELLOW, Door.YELLOW, Door.RED, Door.RED, Icon.ITEM);
+        BuildingTile weaponShop = new BuildingTile("Weapon Shop", Door.CURSED_STATUE, Door.HALL_OF_WONDERS, Door.FALSE, Door.FALSE, Icon.ITEM);
         buildingTileRepository.save(weaponShop);
 
-        StreetTile ambushAlley = new StreetTile("Ambush Alley", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE, Icon.EVENT);
+        StreetTile ambushAlley = new StreetTile("Ambush Alley", Door.FALSE, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
         streetTileRepository.save(ambushAlley);
 
-        StreetTile belovedRangerStatue = new StreetTile("Beloved Ranger Statue", Door.YELLOW, Door.RED, Door.YELLOW, Door.RED, Icon.FALSE);
+        StreetTile belovedRangerStatue = new StreetTile("Beloved Ranger Statue", Door.FALSE, Door.FALSE, Door.FALSE, Door.SHRINE_TO_GARGAUTH, Icon.FALSE);
         streetTileRepository.save(belovedRangerStatue);
 
-        StreetTile cursedStatue = new StreetTile("Cursed Statue", Door.FALSE, Door.RED, Door.YELLOW, Door.FALSE, Icon.OMEN);
+        StreetTile cursedStatue = new StreetTile("Cursed Statue", Door.FALSE, Door.FALSE, Door.WEAPON_SHOP, Door.FALSE, Icon.OMEN);
         streetTileRepository.save(cursedStatue);
 
-        StreetTile deadEnd = new StreetTile("Dead End", Door.RED, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
+        StreetTile deadEnd = new StreetTile("Dead End", Door.EXECUTIONERS_BLOCK, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
         streetTileRepository.save(deadEnd);
 
-        StreetTile executionersBlock = new StreetTile("Executioner's Block", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.RED, Icon.OMEN);
+        StreetTile executionersBlock = new StreetTile("Executioner's Block", Door.FOUNTAIN, Door.FELOGYRS_FIREWORKS, Door.DEAD_END, Door.TRADING_POST, Icon.OMEN);
         streetTileRepository.save(executionersBlock);
 
-        StreetTile fountain = new StreetTile("Fountain", Door.YELLOW, Door.YELLOW, Door.YELLOW, Door.YELLOW, Icon.FALSE);
+        StreetTile fountain = new StreetTile("Fountain", Door.MURDER_ROW, Door.KITCHEN, Door.EXECUTIONERS_BLOCK, Door.MANSION, Icon.FALSE);
         streetTileRepository.save(fountain);
 
-        StreetTile grayHarbor = new StreetTile("Gray harbor", Door.YELLOW, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
+        StreetTile grayHarbor = new StreetTile("Gray harbor", Door.FALSE, Door.FALSE, Door.FALSE, Door.ELFSONG_TAVERN, Icon.EVENT);
         streetTileRepository.save(grayHarbor);
 
-        StreetTile hauntedAlley = new StreetTile("Haunted Alley", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE, Icon.OMEN);
+        StreetTile hauntedAlley = new StreetTile("Haunted Alley", Door.ELFSONG_TAVERN, Door.FALSE, Door.ROSE_PORTAL, Door.SPYS_ROOST, Icon.OMEN);
         streetTileRepository.save(hauntedAlley);
 
-        StreetTile marketplace = new StreetTile("Marketplace", Door.FALSE, Door.YELLOW, Door.FALSE, Door.RED, Icon.ITEM);
+        StreetTile marketplace = new StreetTile("Marketplace", Door.SHRINE_TO_GARGAUTH, Door.FALSE, Door.ELFSONG_TAVERN, Door.FALSE, Icon.ITEM);
         streetTileRepository.save(marketplace);
 
-        StreetTile murderRow = new StreetTile("Murder Row", Door.RED, Door.FALSE, Door.FALSE, Door.RED, Icon.OMEN);
+        StreetTile murderRow = new StreetTile("Murder Row", Door.FALSE, Door.SMITHY, Door.FOUNTAIN, Door.FALSE, Icon.OMEN);
         streetTileRepository.save(murderRow);
 
-        StreetTile rosePortal = new StreetTile("Rose Portal", Door.YELLOW, Door.YELLOW, Door.FALSE, Door.YELLOW, Icon.EVENT);
+        StreetTile rosePortal = new StreetTile("Rose Portal", Door.HAUNTED_ALLEY, Door.WATERFRONT, Door.FALSE, Door.TEMPLE_OF_UMBERLEE, Icon.EVENT);
         streetTileRepository.save(rosePortal);
 
-        StreetTile trashPile = new StreetTile("Trash Pile", Door.FALSE, Door.FALSE, Door.RED, Door.FALSE, Icon.EVENT);
+        StreetTile trashPile = new StreetTile("Trash Pile", Door.FALSE, Door.FALSE, Door.STOREHOUSE, Door.FALSE, Icon.EVENT);
         streetTileRepository.save(trashPile);
 
-        StreetTile watchPost = new StreetTile("Watch Post", Door.FALSE, Door.RED, Door.FALSE, Door.RED, Icon.EVENT);
+        StreetTile watchPost = new StreetTile("Watch Post", Door.FALSE, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
         streetTileRepository.save(watchPost);
 
-        StreetTile waterfront = new StreetTile("Waterfront", Door.YELLOW, Door.FALSE, Door.RED, Door.FALSE, Icon.EVENT);
+        StreetTile waterfront = new StreetTile("Waterfront", Door.FALSE, Door.FALSE, Door.FALSE, Door.ROSE_PORTAL, Icon.EVENT);
         streetTileRepository.save(waterfront);
 
         EventCard aFlumphAppears = new EventCard("The strangest thing you've ever seen - a jellyfish with eyes - floats out of the corner, gesturing emphatically with its barbed tentacles", "A Flumph Appears", "You must attempt a knowledge roll: 4+ You discover a hidden treasure cache. Draw an item card, 2-3: You discover a hollow filled with spiders that swarm up your arm. Lose 1 Might. 0-1 You find a Kobold catacomb title( or the Catacomb landing if the Kobold hideout isn't in play yet) Take 1 die of Physical damage.");

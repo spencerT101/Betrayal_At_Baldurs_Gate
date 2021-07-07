@@ -1,4 +1,7 @@
 package com.example.BetrayalAtBaldursGate.characters;
+import com.example.BetrayalAtBaldursGate.games.GameState;
+import com.example.BetrayalAtBaldursGate.tiles.Tile;
+
 import javax.persistence.*;
 
 
@@ -27,6 +30,9 @@ Hero extends Character {
     @Column(name = "age")
     private int age;
 
+    @Transient
+    private Tile tile;
+
     public Hero(String name, int might, int speed, int sanity, int knowledge, String race, int maxMight, int maxSpeed, int maxSanity, int maxKnowledge, String image, String profession, int age) {
         super(name, might, speed, sanity, knowledge, race, image);
         this.maxMight = maxMight;
@@ -35,9 +41,18 @@ Hero extends Character {
         this.maxKnowledge = maxKnowledge;
         this.profession = profession;
         this.age = age;
+        this.tile = null;
     }
 
     public Hero() {
+    }
+
+    public Tile getTile() {
+        return tile;
+    }
+
+    public void setTile(Tile tile) {
+        this.tile = tile;
     }
 
     public int getMaxMight() {
@@ -86,5 +101,47 @@ Hero extends Character {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Tile move(GameState game, Integer direction) {
+        String intendedTile = null;
+        if (direction == 1){
+            if (this.tile.getWestDoor().getName() == "False"){
+                intendedTile = this.getTile().getName();
+            } else {
+                intendedTile = this.tile.getWestDoor().getName();
+            };
+        } else if(direction == 2){
+            if (this.tile.getEastDoor().getName() == "False"){
+                intendedTile = this.getTile().getName();
+            } else {
+                intendedTile = this.tile.getEastDoor().getName();
+            };
+        } else if (direction == 3){
+            if (this.tile.getNorthDoor().getName() == "False"){
+                intendedTile = this.getTile().getName();
+            } else {
+                intendedTile = this.tile.getNorthDoor().getName();
+            };
+        } else if (direction == 4){
+            if (this.tile.getNorthDoor().getName() == "False"){
+                intendedTile = this.getTile().getName();
+            } else {
+                intendedTile = this.tile.getNorthDoor().getName();
+            };
+        };
+
+        String finalIntendedTile = intendedTile;
+        game.getBuildingTiles().forEach(buildingTile -> {
+            if (buildingTile.getName().equals(finalIntendedTile)){
+                this.setTile(buildingTile);
+            }
+        });
+        game.getStreetTiles().forEach(streetTile -> {
+            if (streetTile.getName().equals(finalIntendedTile)){
+                this.setTile(streetTile);
+            }
+        });
+        return this.getTile();
     }
 }

@@ -7,6 +7,7 @@ public class StandardGame extends GameState{
     public StandardGame() {
         super();
         this.omenCounter = 0;
+//        this.populateGame();
     }
 
     public int getOmenCounter() {

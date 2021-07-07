@@ -4,6 +4,7 @@ import com.example.BetrayalAtBaldursGate.characters.Monster;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @MappedSuperclass
 public abstract class Tile {
@@ -113,6 +114,10 @@ public abstract class Tile {
         this.heroes = heroes;
     }
 
+    public void addHero(Hero hero) {
+        this.heroes.add(hero);
+    }
+
     public ArrayList<Monster> getMonsters() {
         return monsters;
     }
@@ -120,4 +125,9 @@ public abstract class Tile {
     public void setMonsters(ArrayList<Monster> monsters) {
         this.monsters = monsters;
     }
+
+    public void addMonster(Monster monster) {
+        this.monsters.add(monster);
+    }
+
 }
