@@ -41,9 +41,9 @@ public abstract class GameState {
 //    MonsterRepository monsterRepository = new MonsterRepository;
 //    OmenCardRepository omenCardRepository = new OmenCardRepository;
 //    StreetTileRepository streetTileRepository = new StreetTileRepository;
-    BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.MARKETPLACE, Door.GRAY_HARBOUR, Door.HAUNTED_ALLEY, Door.INNER_CHAMBER, Icon.FALSE);
-    BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.STOREHOUSE, Door.ELFSONG_TAVERN, Door.SPYS_ROOST, Door.KITCHEN, Icon.FALSE);
-    BuildingTile kitchen = new BuildingTile("Kitchen", Door.SMITHY, Door.INNER_CHAMBER, Door.FELOGYRS_FIREWORKS, Door.FOUNTAIN, Icon.FALSE);
+//    BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.MARKETPLACE, Door.GRAY_HARBOUR, Door.HAUNTED_ALLEY, Door.INNER_CHAMBER, Icon.FALSE);
+//    BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.STOREHOUSE, Door.ELFSONG_TAVERN, Door.SPYS_ROOST, Door.KITCHEN, Icon.FALSE);
+//    BuildingTile kitchen = new BuildingTile("Kitchen", Door.SMITHY, Door.INNER_CHAMBER, Door.FELOGYRS_FIREWORKS, Door.FOUNTAIN, Icon.FALSE);
 
 
     private int roundCounter;
@@ -79,7 +79,7 @@ public abstract class GameState {
         return hero;
     }
 
-    public void setPlayers(Hero hero) {
+    public void setHero(Hero hero) {
         this.hero = hero;
     }
 

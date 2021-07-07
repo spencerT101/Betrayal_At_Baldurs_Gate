@@ -106,28 +106,28 @@ Hero extends Character {
     public Tile move(GameState game, Integer direction) {
         String intendedTile = null;
         if (direction == 1){
-            if (this.tile.getWestDoor().name() == "FALSE"){
+            if (this.tile.getWestDoor().getName() == "False"){
                 intendedTile = this.getTile().getName();
             } else {
-                intendedTile = this.tile.getWestDoor().name();
+                intendedTile = this.tile.getWestDoor().getName();
             };
         } else if(direction == 2){
-            if (this.tile.getEastDoor().name() == "FALSE"){
+            if (this.tile.getEastDoor().getName() == "False"){
                 intendedTile = this.getTile().getName();
             } else {
-                intendedTile = this.tile.getEastDoor().name();
+                intendedTile = this.tile.getEastDoor().getName();
             };
         } else if (direction == 3){
-            if (this.tile.getNorthDoor().name() == "FALSE"){
+            if (this.tile.getNorthDoor().getName() == "False"){
                 intendedTile = this.getTile().getName();
             } else {
-                intendedTile = this.tile.getNorthDoor().name();
+                intendedTile = this.tile.getNorthDoor().getName();
             };
         } else if (direction == 4){
-            if (this.tile.getNorthDoor().name() == "FALSE"){
+            if (this.tile.getNorthDoor().getName() == "False"){
                 intendedTile = this.getTile().getName();
             } else {
-                intendedTile = this.tile.getNorthDoor().name();
+                intendedTile = this.tile.getNorthDoor().getName();
             };
         };
 

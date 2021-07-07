@@ -45,7 +45,25 @@ public class HeroController {
         return new ResponseEntity<>(heroRepository.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/start/move/{direction}")
+    @GetMapping(value = "/start")
+    public ResponseEntity<String> startGame() {
+        Hero hero = heroRepository.findAll().get(0);
+        game.setHero(hero);
+        monsterRepository.findAll().forEach(monster -> game.getMonsters().add(monster));
+        buildingTileRepository.findAll().forEach(buildingTile -> game.getBuildingTiles().add(buildingTile));
+        streetTileRepository.findAll().forEach(streetTile -> game.getStreetTiles().add(streetTile));
+        omenCardRepository.findAll().forEach(omenCard -> game.getOmenCards().add(omenCard));
+        eventCardRepository.findAll().forEach(eventCard -> game.getEventCards().add(eventCard));
+        game.getBuildingTiles().forEach(buildingTile -> {
+            if (buildingTile.getName().equals("Elfsong Tavern")) {
+                buildingTile.addHero(game.getHero());
+                game.getHero().setTile(buildingTile);
+            }
+        });
+        return new ResponseEntity("Random string7", HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/move/{direction}")
     public ResponseEntity<String> moveHeroes(@PathVariable Integer direction) {
 
         String currentTile = game.getHero().getTile().getName();
@@ -62,7 +80,7 @@ public class HeroController {
                 }
             });
             if (currentTile.equals(game.getHero().getTile().getName())) {
-                return new ResponseEntity<>("You cannot move in that direction from" + currentTile, HttpStatus.OK);
+                return new ResponseEntity<>("You cannot move in that direction from " + currentTile, HttpStatus.OK);
             }
             return new ResponseEntity<>("You moved from " + currentTile + " to " + game.getHero().getTile().getName()
                     , HttpStatus.OK);
@@ -70,22 +88,6 @@ public class HeroController {
             return new ResponseEntity<>("You didn't submit a direction to move", HttpStatus.OK);
         }
 
-    }
-
-    @GetMapping(value = "/start")
-    public ResponseEntity<String> startGame() {
-        Hero hero = heroRepository.findAll().get(0);
-        monsterRepository.findAll().forEach(monster -> game.getMonsters().add(monster));
-        buildingTileRepository.findAll().forEach(buildingTile -> game.getBuildingTiles().add(buildingTile));
-        streetTileRepository.findAll().forEach(streetTile -> game.getStreetTiles().add(streetTile));
-        omenCardRepository.findAll().forEach(omenCard -> game.getOmenCards().add(omenCard));
-        eventCardRepository.findAll().forEach(eventCard -> game.getEventCards().add(eventCard));
-        game.getBuildingTiles().forEach(buildingTile -> {
-            if (buildingTile.getName().equals("Elfsong Tavern")) {
-                buildingTile.addHero(hero);
-            }
-        });
-        return new ResponseEntity("Random string7", HttpStatus.OK);
     }
 
 

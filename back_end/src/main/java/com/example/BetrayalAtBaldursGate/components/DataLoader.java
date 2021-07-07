@@ -64,6 +64,15 @@ public class DataLoader implements ApplicationRunner {
         Hero torskar = new Hero("Torskar Stonecleaver", 5, 4, 3, 3, "Dwarf", 8, 6, 7, 6, "image", "Barbarian", 130);
         heroRepository.save(torskar);
 
+        BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.MARKETPLACE, Door.GRAY_HARBOUR, Door.HAUNTED_ALLEY, Door.INNER_CHAMBER, Icon.FALSE);
+        buildingTileRepository.save(elfsongTavern);
+
+        BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.STOREHOUSE, Door.ELFSONG_TAVERN, Door.SPYS_ROOST, Door.KITCHEN, Icon.FALSE);
+        buildingTileRepository.save(innerChamber);
+
+        BuildingTile kitchen = new BuildingTile("Kitchen", Door.SMITHY, Door.INNER_CHAMBER, Door.FELOGYRS_FIREWORKS, Door.FOUNTAIN, Icon.FALSE);
+        buildingTileRepository.save(kitchen);
+
         BuildingTile felogyrsFireworks = new BuildingTile("Felogyr's Fireworks", Door.KITCHEN, Door.FALSE, Door.SORCEROUS_SUNDRIES, Door.EXECUTIONERS_BLOCK, Icon.EVENT);
         buildingTileRepository.save(felogyrsFireworks);
 
