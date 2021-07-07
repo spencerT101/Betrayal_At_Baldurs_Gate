@@ -7,8 +7,8 @@ function MoveButton({clickLeftButton, clickRightButton, clickDownButton, clickUp
         <>
             <button onClick={clickLeftButton} className="button">Left</button>
             <button onClick={clickRightButton} className="button" >Right</button>
-            <button onClick={clickDownButton} className="button">Up</button>
-            <button onClick={clickUpButton} className="button">Down</button>
+            <button onClick={clickUpButton} className="button">Up</button>
+            <button onClick={clickDownButton} className="button">Down</button>
         </>
     )
 

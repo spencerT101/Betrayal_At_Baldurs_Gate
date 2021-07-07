@@ -124,10 +124,10 @@ Hero extends Character {
                 intendedTile = this.tile.getNorthDoor().getName();
             };
         } else if (direction == 4){
-            if (this.tile.getNorthDoor().getName() == "False"){
+            if (this.tile.getSouthDoor().getName() == "False"){
                 intendedTile = this.getTile().getName();
             } else {
-                intendedTile = this.tile.getNorthDoor().getName();
+                intendedTile = this.tile.getSouthDoor().getName();
             };
         };
 

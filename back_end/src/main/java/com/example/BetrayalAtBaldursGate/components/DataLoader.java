@@ -113,7 +113,7 @@ public class DataLoader implements ApplicationRunner {
         BuildingTile elfsongTavern = new BuildingTile("Elfsong Tavern", Door.MARKETPLACE, Door.GRAY_HARBOUR, Door.HAUNTED_ALLEY, Door.INNER_CHAMBER, Icon.FALSE);
         buildingTileRepository.save(elfsongTavern);
 
-        StreetTile grayHarbor = new StreetTile("Gray Harbor", Door.FALSE, Door.FALSE, Door.FALSE, Door.ELFSONG_TAVERN, Icon.EVENT);
+        StreetTile grayHarbor = new StreetTile("Gray Harbour", Door.FALSE, Door.FALSE, Door.FALSE, Door.ELFSONG_TAVERN, Icon.EVENT);
         streetTileRepository.save(grayHarbor);
 
         BuildingTile tradingPost = new BuildingTile("Trading Post", Door.FALSE, Door.EXECUTIONERS_BLOCK, Door.FALSE, Door.FALSE, Icon.EVENT);
