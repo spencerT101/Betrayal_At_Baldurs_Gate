@@ -10,7 +10,6 @@ function GameCard({omenCardShuffle}) {
   
     const omenCardItems = omenCardShuffle[0]
     
-
     return (
 
         <>

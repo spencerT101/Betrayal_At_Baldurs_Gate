@@ -4,7 +4,7 @@ function DiceRoll({}) {
 
     return (
         <>
-            <button  className="attack-dice-button">Start Game</button>
+            <button  className="attack-dice-button">Dice Roll</button>
         </>
 
     )

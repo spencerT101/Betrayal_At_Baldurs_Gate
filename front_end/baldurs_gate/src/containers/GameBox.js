@@ -109,7 +109,7 @@ function GameBox() {
                 <div id="bottom-layer">
                     <MoveButton className="button" clickLeftButton={clickLeftButton} clickRightButton={clickRightButton} clickDownButton={clickDownButton} clickUpButton={clickUpButton} />
                     <AttackButton className="button" />
-                    <DiceRoll id="start-game" />
+                    <DiceRoll id="dice-roll" />
                     <CharacterStats id="char-stats" />
                 </div>
 
