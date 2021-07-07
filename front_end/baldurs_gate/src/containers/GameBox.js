@@ -17,17 +17,14 @@ function GameBox() {
     const [scroll, setScroll] = useState([])
     const [omenCardShuffle, setOmenCardShuffle] = useState([])
     const [startGame, setStartGame] = useState([])
-    const [characterLeft, setCharacterLeft] = useState([])
-    // const [characterLeft, setCharacterLeft] = useState([])
-    // const [characterLeft, setCharacterLeft] = useState([])
-    // const [characterLeft, setCharacterLeft] = useState([])
+    const [characterPosition, setCharacterPosition] = useState([])
+
 
     useEffect(() => {
         fetchHeroesApi()
         fetchScroll()
         fetchShuffledOmenCard()
         fetchStartGame()
-        moveCharacterLeft()
     }, [])
 
     const fetchStartGame = function () {
@@ -45,16 +42,48 @@ function GameBox() {
     const moveCharacterLeft = function () {
         fetch("http://localhost:8080/api/move/1")
             .then(response => response.text())
-            .then(characterLeft => setCharacterLeft(characterLeft))
+            .then(characterPosition => setCharacterPosition(characterPosition))
+    }
+    const moveCharacterRight = function () {
+        fetch("http://localhost:8080/api/move/2")
+            .then(response => response.text())
+            .then(characterPosition => setCharacterPosition(characterPosition))
+    }
+    const moveCharacterUp = function () {
+        fetch("http://localhost:8080/api/move/3")
+            .then(response => response.text())
+            .then(characterPosition => setCharacterPosition(characterPosition))
+    }
+    const moveCharacterDown = function () {
+        fetch("http://localhost:8080/api/move/4")
+            .then(response => response.text())
+            .then(characterPosition => setCharacterPosition(characterPosition))
     }
 
+    const clickLeftButton = function () {
+        moveCharacterLeft();
+        fetchShuffledOmenCard();
+    }
 
+    const clickRightButton = function () {
+        moveCharacterRight();
+        fetchShuffledOmenCard();
+    }
+
+    const clickUpButton = function () {
+        moveCharacterUp();
+        fetchShuffledOmenCard();
+    }
+
+    const clickDownButton = function () {
+        moveCharacterDown();
+        fetchShuffledOmenCard();
+    }
 
     const fetchHeroesApi = function () {
         fetch("http://localhost:8080/api/heroes")
             .then(response => response.json())
             .then(heroes => setHeroes(heroes))
-
     }
 
     const fetchScroll = function () {
@@ -72,20 +101,17 @@ function GameBox() {
                 </div>
 
                 <div id="middle-layer">
-                    <TextBox characterLeft={characterLeft} />
+                    <TextBox characterPosition = {characterPosition} />
                     <CharacterCard heroes={heroes} />
                     <GameCard omenCardShuffle={omenCardShuffle} />
                 </div>
 
                 <div id="bottom-layer">
-                    <MoveButton className="button" fetchShuffledOmenCard={fetchShuffledOmenCard} moveCharacterLeft={moveCharacterLeft} />
+                    <MoveButton className="button" clickLeftButton={clickLeftButton} clickRightButton={clickRightButton} clickDownButton={clickDownButton} clickUpButton={clickUpButton} />
                     <AttackButton className="button" />
-                    <DiceRoll id="dice-rolls" startGame={startGame} />
+                    <DiceRoll id="dice-roll" />
                     <CharacterStats id="char-stats" />
                 </div>
-
-
-
 
             </main>
         </>
