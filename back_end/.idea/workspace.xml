@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2ee6ffb-4026-4901-95f9-a61021cb59b7" name="Default Changelist" comment="move working in front end and all bugs checked">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/characters/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/babg_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/babg_db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/babg_db.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/babg_db.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/EventCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/EventCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/HeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/HeroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/OmenCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/OmenCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/services/AttackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/services/AttackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/services/HeroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/services/HeroService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/characters/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/characters/Character.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/components/DataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/components/DataLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/controllers/EventCardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/controllers/EventCardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/controllers/HeroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/controllers/HeroController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/controllers/OmenCardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/controllers/OmenCardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/services/AttackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/services/AttackService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/services/GameService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/services/GameService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/services/HeroService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/services/HeroService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/baldurs_gate/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/baldurs_gate/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/baldurs_gate/src/components/GameCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/baldurs_gate/src/components/GameCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/baldurs_gate/src/components/css/text-box.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/baldurs_gate/src/components/css/text-box.css" afterDir="false" />
     </list>
     <list id="c361d398-368d-4f7b-9b54-585879ebdd17" name="Changes by user" comment="" />
     <option name="SHOW_DIALOG" value="false" />

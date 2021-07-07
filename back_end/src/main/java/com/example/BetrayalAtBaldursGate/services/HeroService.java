@@ -1,13 +1,10 @@
 package com.example.BetrayalAtBaldursGate.services;
 
-import com.example.BetrayalAtBaldursGate.cards.OmenCard;
 import com.example.BetrayalAtBaldursGate.characters.Hero;
 import com.example.BetrayalAtBaldursGate.repositories.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @Service

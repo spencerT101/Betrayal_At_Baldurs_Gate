@@ -17,8 +17,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DataLoader implements ApplicationRunner {
-    //    @Autowired
-    //    CardRepository cardRepository;
+
     @Autowired
     MonsterRepository monsterRepository;
 

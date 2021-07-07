@@ -1,6 +1,5 @@
 package com.example.BetrayalAtBaldursGate.controllers;
 
-import com.example.BetrayalAtBaldursGate.cards.Card;
 import com.example.BetrayalAtBaldursGate.cards.EventCard;
 import com.example.BetrayalAtBaldursGate.repositories.EventCardRepository;
 import com.example.BetrayalAtBaldursGate.services.CardService;
