@@ -1,0 +1,19 @@
+Index: src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.BetrayalAtBaldursGate.components;\n\nimport com.example.BetrayalAtBaldursGate.cards.OmenCard;\nimport com.example.BetrayalAtBaldursGate.characters.Hero;\nimport com.example.BetrayalAtBaldursGate.cards.EventCard;\n\nimport com.example.BetrayalAtBaldursGate.characters.Monster;\nimport com.example.BetrayalAtBaldursGate.repositories.*;\nimport com.example.BetrayalAtBaldursGate.tiles.BuildingTile;\nimport com.example.BetrayalAtBaldursGate.tiles.Door;\nimport com.example.BetrayalAtBaldursGate.tiles.Icon;\nimport com.example.BetrayalAtBaldursGate.tiles.StreetTile;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.boot.ApplicationArguments;\nimport org.springframework.boot.ApplicationRunner;\nimport org.springframework.stereotype.Component;\n\n@Component\npublic class DataLoader implements ApplicationRunner {\n    //    @Autowired\n    //    CardRepository cardRepository;\n    @Autowired\n    MonsterRepository monsterRepository;\n\n\n\n    @Autowired\n    HeroRepository heroRepository;\n\n    @Autowired\n    EventCardRepository eventCardRepository;\n\n    @Autowired\n    ItemCardRepository itemCardRepository;\n\n    @Autowired\n    OmenCardRepository omenCardRepository;\n\n    @Autowired\n    BuildingTileRepository buildingTileRepository;\n\n    @Autowired\n    StreetTileRepository streetTileRepository;\n\n\n    public DataLoader() {\n    }\n\n    public void run(ApplicationArguments args) {\n        Hero Gretchen = new Hero(\"Gretchen Titchwillow\", 4, 4, 4,3, \"Halfling\", 8,8,6,8,\"image\", \"Druid\", 112);\n        heroRepository.save(Gretchen);\n\n        Monster monster = new Monster(\"Test\", 4, 4, 4, 4, \"Test\", \"test\");\n        monsterRepository.save(monster);\n\n        BuildingTile tileWonder = new BuildingTile(\"Hall of Wonders\", Door.FALSE, Door.FALSE, Door.YELLOW, Door.RED, Icon.EVENT);\n        buildingTileRepository.save(tileWonder);\n\n        StreetTile ambushAlley = new StreetTile(\"Ambush Alley\", Door.YELLOW, Door.FALSE, Door.YELLOW, Door.FALSE,Icon.EVENT);\n        streetTileRepository.save(ambushAlley);\n\n        OmenCard omenCard = new OmenCard(\"Care Bear Vision\",\"Bartholomew\",\"Care bears rule!\");\n        omenCardRepository.save(omenCard);\n\n        EventCard eventCard = new EventCard(\"Death Vision\", \"Barry\", \"text example\");\n        eventCardRepository.save(eventCard);\n\n        OmenCard berserkerAxe = new OmenCard(\"\")\n\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java b/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java
+--- a/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java	(revision 7a91a93311f7b92fdb11d020b4e4c6c183262a58)
++++ b/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java	(date 1625062086694)
+@@ -65,7 +65,7 @@
+         EventCard eventCard = new EventCard("Death Vision", "Barry", "text example");
+         eventCardRepository.save(eventCard);
+ 
+-        OmenCard berserkerAxe = new OmenCard("")
++        OmenCard berserkerAxe = new OmenCard(""n
+ 
+     }
+ }

@@ -1,0 +1,15 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Betrayal_At_Baldurs_Gate\nCapstone group project creating a computer game of the board game Betrayal At Baldur's Gate utilising Spring boot,SQL, React etc.\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision e46be3926375c2458f947fd050f4d49cdf6b03c4)
++++ b/README.md	(date 1625063007016)
+@@ -1,2 +1,2 @@
+ # Betrayal_At_Baldurs_Gate
+-Capstone group project creating a computer game of the board game Betrayal At Baldur's Gate utilising Spring boot,SQL, React etc.
++Capstone group project creating a computer game of the board game Betrayal At Baldur's Gate utilising Spring boot,SQL, React etc.
+\ No newline at end of file

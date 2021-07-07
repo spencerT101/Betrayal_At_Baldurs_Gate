@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2ee6ffb-4026-4901-95f9-a61021cb59b7" name="Default Changelist" comment="added .mvn to git ignore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/characters/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/characters/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/characters/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/HeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/HeroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/controllers/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/games/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/games/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/games/StandardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/games/StandardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/BuildingTileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/BuildingTileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/EventCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/EventCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/HeroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/HeroRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/ItemCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/ItemCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/MonsterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/MonsterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/OmenCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/OmenCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/StreetTileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/StreetTileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/repositories/TestRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/services/TestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/tiles/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/tiles/Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/tiles/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/BetrayalAtBaldursGate/BetrayalAtBaldursGateApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/BetrayalAtBaldursGate/BetrayalAtBaldursGateApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/BetrayalAtBaldursGate/StandardGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/BetrayalAtBaldursGate/StandardGameTest.java" afterDir="false" />
+    </list>
+    <list id="c361d398-368d-4f7b-9b54-585879ebdd17" name="Changes by user" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1uf6XA4Yjp6x3VCZcb2FybLTtau" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/back_end" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BetrayalAtBaldursGateApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="BetrayalAtBaldursGate" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.BetrayalAtBaldursGate.BetrayalAtBaldursGateApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2ee6ffb-4026-4901-95f9-a61021cb59b7" name="Default Changelist" comment="" />
+      <created>1625044335102</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625044335102</updated>
+      <workItem from="1625044338952" duration="56000" />
+      <workItem from="1625044402776" duration="228000" />
+      <workItem from="1625044658676" duration="76000" />
+      <workItem from="1625058003789" duration="364000" />
+      <workItem from="1625058490865" duration="511000" />
+      <workItem from="1625059021538" duration="254000" />
+      <workItem from="1625059287705" duration="2584000" />
+      <workItem from="1625061976896" duration="12000" />
+      <workItem from="1625061999474" duration="49000" />
+      <workItem from="1625062056295" duration="85000" />
+      <workItem from="1625062175038" duration="49000" />
+      <workItem from="1625062237604" duration="8000" />
+      <workItem from="1625062278035" duration="31000" />
+      <workItem from="1625062333071" duration="102000" />
+      <workItem from="1625062595408" duration="239000" />
+      <workItem from="1625062861696" duration="53000" />
+      <workItem from="1625062937480" duration="7416000" />
+      <workItem from="1625129456985" duration="3526000" />
+      <workItem from="1625138554677" duration="465000" />
+      <workItem from="1625139029633" duration="112000" />
+      <workItem from="1625139159317" duration="89000" />
+      <workItem from="1625145817694" duration="2622000" />
+      <workItem from="1625152567661" duration="2466000" />
+      <workItem from="1625155897458" duration="63000" />
+      <workItem from="1625156446430" duration="2802000" />
+      <workItem from="1625223578075" duration="5629000" />
+      <workItem from="1625482828377" duration="841000" />
+      <workItem from="1625492485073" duration="160000" />
+      <workItem from="1625492662090" duration="39000" />
+      <workItem from="1625492731670" duration="21000" />
+      <workItem from="1625494613558" duration="323000" />
+      <workItem from="1625500194181" duration="7657000" />
+      <workItem from="1625573515052" duration="12000" />
+      <workItem from="1625579343709" duration="3703000" />
+      <workItem from="1625648723159" duration="517000" />
+    </task>
+    <task id="LOCAL-00001" summary="top half omen cards  created in DataLoader.">
+      <created>1625067130666</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625067130666</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added .mvn to git ignore">
+      <created>1625146959339</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625146959339</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="top half omen cards  created in DataLoader." />
+    <MESSAGE value="added .mvn to git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="added .mvn to git ignore" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
