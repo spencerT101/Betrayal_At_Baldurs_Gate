@@ -7,7 +7,7 @@
 
 
 .text-box {
-    background-image: url('/src/components/images/scroll-portrait.png');
+    background-image: url('/src/components/images/scroll-portrait-rotated.png');
     background-size: 100%;
     color: black;  
     height: 500px;
@@ -16,6 +16,10 @@
     flex-wrap:wrap;
     justify-content: center;
     align-items: center; 
+    font-family: 'Tangerine', cursive;
+    font-size:30px;
+    padding:100px;
+    
 }
 
 .text {
@@ -27,8 +31,47 @@
     flex-wrap:wrap;
     justify-content: center;
     align-items: center;
-    margin: 0px; 
     padding: 0px;
     font-family: 'Tangerine', cursive;
     font-size: 30px;
+}
+
+.portrait-box {
+    background-image: url('/src/components/images/scroll-portrait.png');
+    background-size: 100%;
+    color: black;  
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Tangerine', cursive;
+    font-size:30px;
+    padding:100px;
+}
+
+/* #stat-card{
+    background-color: white;
+   border :20px;
+   width:200px;
+   flex:wrap;
+   }
+    */
+   
+   
+
+
+.text-character{
+    color: black;
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    background-color: silver;
+    height:35px;
+    border-radius: 20px;
+    text-align: center;
+    width:200px;
+   
+    
+    
 }

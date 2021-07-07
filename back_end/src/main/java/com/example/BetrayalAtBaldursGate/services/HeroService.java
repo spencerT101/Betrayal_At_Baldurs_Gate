@@ -21,7 +21,7 @@ public class HeroService {
     }
 
     public String displayMessage() {
-        return "these are game instructions";
+        return "This is where the move information should display";
     }
 
     public String moveInADirection(int direction) {

@@ -47,7 +47,7 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        Hero azadeh = new Hero("Azadeh Rashka", 3, 4, 5, 3, "Human", 7, 8, 8, 5, "image", "Monk", 42);
+        Hero azadeh = new Hero("Azadeh Rashka", 3, 4, 5, 3, "Human", 7, 8, 8, 5, "images/Character Classes/Azadeh Rashka.png", "Monk", 42);
         heroRepository.save(azadeh);
 
         Hero dhadius = new Hero("Dhadius The Scarlet", 2, 4, 4, 5, "Human", 6, 8, 8, 7, "image", "Wizard", 55);
