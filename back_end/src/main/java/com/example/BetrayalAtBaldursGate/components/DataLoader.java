@@ -104,7 +104,7 @@ public class DataLoader implements ApplicationRunner {
         StreetTile fountain = new StreetTile("Fountain", Door.MURDER_ROW, Door.KITCHEN, Door.EXECUTIONERS_BLOCK, Door.MANSION, Icon.FALSE);
         streetTileRepository.save(fountain);
 
-        BuildingTile kitchen = new BuildingTile("Kitchen", Door.SMITHY, Door.INNER_CHAMBER, Door.FELOGYRS_FIREWORKS, Door.FOUNTAIN, Icon.FALSE);
+        BuildingTile kitchen = new BuildingTile("Kitchen", Door.FALSE, Door.INNER_CHAMBER, Door.FELOGYRS_FIREWORKS, Door.FOUNTAIN, Icon.FALSE);
         buildingTileRepository.save(kitchen);
 
         BuildingTile innerChamber = new BuildingTile("Inner Chamber", Door.STOREHOUSE, Door.ELFSONG_TAVERN, Door.SPYS_ROOST, Door.KITCHEN, Icon.FALSE);
@@ -156,7 +156,7 @@ public class DataLoader implements ApplicationRunner {
 //        StreetTile watchPost = new StreetTile("Watch Post", Door.FALSE, Door.FALSE, Door.FALSE, Door.FALSE, Icon.EVENT);
 //        streetTileRepository.save(watchPost);
 
-        Monster intelDevour = new Monster("Intellect Devourers",3,3,0,5,"Intellect Devourer", "url");
+        Monster intelDevour = new Monster("Intellect Devourer",3,3,0,5,"Intellect Devourer", "url");
         monsterRepository.save(intelDevour);
 
 
