@@ -6,7 +6,9 @@ function TextBox({characterPosition}) {
 
     return (
         <>
-            <div className="text-box">{characterPosition}</div>
+            <div className="text-box">
+                <p className = "text"> {characterPosition}</p>
+            </div>
         </>
     )
 

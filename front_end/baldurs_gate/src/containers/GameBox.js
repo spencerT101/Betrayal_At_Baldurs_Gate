@@ -114,11 +114,10 @@ function GameBox() {
                     <MoveButton className="button" clickLeftButton={clickLeftButton} clickRightButton={clickRightButton} clickDownButton={clickDownButton} clickUpButton={clickUpButton} />
                     <AttackButton className="button" />
                     <DiceRoll id="dice-roll" />
-                    <CharacterStats id="char-stats" />
                 </div>
 
                 <div>
-                    <img src={Board}></img>
+                    <img src={Board} class = "map"></img>
                 </div>
 
             </main>
