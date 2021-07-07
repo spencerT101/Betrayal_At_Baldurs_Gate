@@ -7,9 +7,7 @@
     <list default="true" id="f2ee6ffb-4026-4901-95f9-a61021cb59b7" name="Default Changelist" comment="move working in front end and all bugs checked">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/babg_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/babg_db.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/babg_db.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/babg_db.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BetrayalAtBaldursGate/components/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/components/DataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/BetrayalAtBaldursGate/components/DataLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/baldurs_gate/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/baldurs_gate/node_modules/.cache/.eslintcache" afterDir="false" />
     </list>
     <list id="c361d398-368d-4f7b-9b54-585879ebdd17" name="Changes by user" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,19 +70,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.BetrayalAtBaldursGateApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BetrayalAtBaldursGateApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.BetrayalAtBaldursGate.BetrayalAtBaldursGateApplication" />
       <module name="BetrayalAtBaldursGate" />

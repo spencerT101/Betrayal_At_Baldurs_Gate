@@ -7,6 +7,8 @@ import DiceRoll from '../components/DiceRoll';
 import CharacterStats from '../components/CharacterStats';
 import TileDisplayPic from "../components/TileDisplayPic";
 import GameCard from "../components/GameCard";
+import Board from "../components/images/Board_removebg.png";
+import Logo from "../components/images/logo.png";
 import "../components/css/main.css";
 import "../components/css/text-box.css";
 
@@ -96,8 +98,10 @@ function GameBox() {
         <>
             <main id="main">
 
+
+
                 <div id="tile-display">
-                    <TileDisplayPic />
+                    <img src ={Logo} alt="image of Betrayal at Baldurs Gate"></img>
                 </div>
 
                 <div id="middle-layer">
@@ -111,6 +115,10 @@ function GameBox() {
                     <AttackButton className="button" />
                     <DiceRoll id="dice-roll" />
                     <CharacterStats id="char-stats" />
+                </div>
+
+                <div>
+                    <img src={Board}></img>
                 </div>
 
             </main>
