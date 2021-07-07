@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-function DiceRoll() {
+function DiceRoll({start}) {
 
     return (
         <>
