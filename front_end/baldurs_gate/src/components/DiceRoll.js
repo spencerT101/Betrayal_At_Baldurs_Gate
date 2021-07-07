@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react'
 
-function DiceRoll({start}) {
+function DiceRoll({}) {
 
     return (
         <>
-            <button className="attack-dice-button">Dice Roll</button>
+            <button  className="attack-dice-button">Start Game</button>
         </>
 
     )
