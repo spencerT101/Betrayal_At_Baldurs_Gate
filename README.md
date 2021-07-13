@@ -16,7 +16,7 @@ The project is to design a web app game version of the board game, Betrayal at B
     
 
 # Final Solution!
-Solution delivers on all the above points. Screen shot below.!
+Solution delivers on all the above points. Screen shot below!
 
 Picture 1
 # ![Screenshot 2021-07-13 at 16 35 45](https://user-images.githubusercontent.com/48687748/125481641-2b8af128-dfe6-4f8e-8967-8869a9006cbd.png)
@@ -24,6 +24,19 @@ Picture 1
 
 Picture 2
 # ![Screenshot 2021-07-13 at 16 40 26](https://user-images.githubusercontent.com/48687748/125482315-7a1a372b-20a2-47b7-b0ef-01802994a665.png)
+
+# Installation
+
+## Backend
+Clone repo. Recommended to open in IntelliJ Idea. In Main/Java file go to BetrayalAtBaldursGate file and select 'run'.
+Go to localhost:8080/api/h2 connect to babg_db to check database has seeded correctly.
+
+## Frontend
+In main folder run 'npm install'. Then run 'npm start'. Go to localhost:3000 to view front end in browser.
+
+#### To ensure the app runs smoothly make sure backend is running before starting frontend.
+
+
 
 # Dependencies/Libraries/Packages/Languages
 
